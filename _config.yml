@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kaicheng Chen / Personal Website"
+title                    : "Home Page"
 title_separator          : "-"
 name                     : &name "Kaicheng Chen"
 description              : &description "I'm a PhD candidate in Economics at Michigan State University."
@@ -82,7 +82,7 @@ yandex_site_verification :
 author:
   name             : "Kaicheng Chen"
   avatar           : "/images/_DSC1623_new.jpeg"
-  bio              : "I'm a PhD candidate in Economics at Michigan State University."
+  bio              : "PhD candidate in Economics, Michigan State University."
   location         : "Lansing, MI"
   employer         :
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -213,6 +213,15 @@ defaults:
   - scope:
       path: ""
       type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _research
+  - scope:
+      path: ""
+      type: _research
     values:
       layout: single
       author_profile: true
