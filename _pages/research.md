@@ -7,12 +7,10 @@ redirect_from:
   - /research
 ---
 
-<hr>
-
-## Job Market Paper
 
 <hr>
 
 ## Working Papers
-* **"Global Value Chains and Intellectual Property Right in Agricultural Trade"** (with Sunghun Lim and Titus Awokuse) _Draft will be provided upon request_
+* **"[Another Look at the Linear Probability Model and Nonlinear Index Models](https://arxiv.org/abs/2308.15338)"** (with Robert S. Martin, Jeffrey M. Wooldridge)
 
+* **"[Fixed-b Asymptotics for Panel Models with Two-Way Clustering]()"** (with Timothy J. Vogelsang)
