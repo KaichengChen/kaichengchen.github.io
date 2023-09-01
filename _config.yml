@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Saera Oh / Personal Website"
+title                    : "Kaicheng Chen / Personal Website"
 title_separator          : "-"
 name                     : &name "Kaicheng Chen"
-description              : &description "I'm a PhD candidate from the Department of Economics at Michigan State University"
+description              : &description "I'm a PhD candidate in Economics at Michigan State University."
 url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "KaichengChen/kaichengchen.github.io"
@@ -81,8 +81,8 @@ yandex_site_verification :
 # Site Author
 author:
   name             : "Kaicheng Chen"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  avatar           : "/images/_DSC1623_new.jpeg"
+  bio              : "I'm a PhD candidate in Economics at Michigan State University."
   location         : "Lansing, MI"
   employer         :
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
@@ -178,7 +178,7 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  publications:
+  research:
     output: true
     permalink: /:collection/:path/
   portfolio:
