@@ -13,4 +13,4 @@ redirect_from:
 ## Working Papers
 * **"[Another Look at the Linear Probability Model and Nonlinear Index Models](https://arxiv.org/abs/2308.15338)"** (with Robert S. Martin, Jeffrey M. Wooldridge)
 
-* **"[Fixed-b Asymptotics for Panel Models with Two-Way Clustering]()"** (with Timothy J. Vogelsang)
+* **"[Fixed-b Asymptotics for Panel Models with Two-Way Clustering](https://arxiv.org/abs/2309.08707)"** (with Timothy J. Vogelsang)
