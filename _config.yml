@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Home Page"
 title_separator          : "-"
-name                     : &name "Kaicheng Chen"
+name                     : &name "Kaicheng Chen (陈凯诚)"
 description              : &description "I'm a PhD candidate in Economics at Michigan State University."
 url                      : https://kaichengchen.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -80,7 +80,8 @@ yandex_site_verification :
 
 # Site Author
 author:
-  name             : "Kaicheng Chen (陈凯诚)"
+  name             : "Kaicheng Chen   
+                      (陈凯诚)"
   avatar           : "https://s2.loli.net/2023/09/02/OdjN8amyZ4MzEfl.png"
   bio              : "PhD candidate in Economics, Michigan State University."
   location         : "Lansing, MI"
