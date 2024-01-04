@@ -18,4 +18,4 @@ redirect_from:
 
  **"[Fixed-b Asymptotics for Panel Models with Two-Way Clustering](https://arxiv.org/abs/2309.08707)"**\
 with **Timothy J. Vogelsang**\
-***(Revise & Resubmit at Journal of Econometrics)***
+(Revise & Resubmit at ***Journal of Econometrics***)
