@@ -11,6 +11,10 @@ redirect_from:
 <hr>
 
 ## Working Papers
+**"[Identification of Nonseparable Models with Endogenous Control Variables]()"**\
+with **Kyoo il Kim**
+
+
  **"[Another Look at the Linear Probability Model and Nonlinear Index Models](https://arxiv.org/abs/2308.15338)"**\
  with **Robert S. Martin** and **Jeffrey M. Wooldridge**
 
