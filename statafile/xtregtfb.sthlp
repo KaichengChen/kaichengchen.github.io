@@ -3,9 +3,7 @@
 {title:Title}
 
 {phang}
-{bf:xtregtfb} {hline 2} provides fixed-b adjustment/bias-correction for the two-way clustering robust standard error proposed by Chiang, Hansen, and Sasaki(2023).  The command {bf:xtregtfb} is an adaption of {bf:xtregtwo}.
-
-
+{bf:xtregtfb} {hline 2} provides fixed-b adjustment/bias-correction for the two-way clustering robust standard error proposed by Chiang, Hansen, and Sasaki(2023). 
 {marker syntax}{...}
 {title:Syntax}
  
