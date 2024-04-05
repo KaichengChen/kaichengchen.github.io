@@ -1,5 +1,4 @@
- --- BEGIN --- xtregftb.pkg -----------------------------------
-        v 17.0
+        v 1
         d xtregftb - provides fixed-b adjustment/bias-correction for the two-way clustering robust standard error proposed by Chiang, Hansen,
         and Sasaki(2023).
 
@@ -15,4 +14,4 @@
 
         f xtregftb.ado
         f xtregftb.sthlp
-  --- END ----- xtregftb.pkg -----------------------------------
+
