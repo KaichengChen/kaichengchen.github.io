@@ -1,4 +1,3 @@
-clear all
 ////////////////////////////////////////////////////////////////////////////////
 // STATA FOR Chen and Vogelsang (2023)
 // An adaption from xtregtwo.ado by Chiang, Hansen, Sasaki (2022)
@@ -6,7 +5,7 @@ clear all
 //
 //
 
-!* version 17.0  3Apr2024
+!* version 17.0  7Apr2024
 program define xtregtfb, eclass
     version 17.0
  
@@ -193,8 +192,9 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	//Omega_hat_3 = min((N,T)')/(N*T)/(N*T) :* Omega_hat_3
 	
 	// Select M Hat
-	rho_hat = J(cols(X),1,0) //include rho_hat for 1*uhat?
-	for( kdx = 1 ; kdx <= cols(X) ; kdx++ ){	
+	if (fe == 1 | constant == 0){
+		rho_hat = J(cols(X), 1, 0) //no constant term
+		for( kdx = 1 ; kdx <= cols(X) ; kdx++ ){	
 		utdx = 2
 		tdx = uniq_t[utdx,1]
 		tdx_lag = uniq_t[utdx-1,1]
@@ -206,10 +206,32 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 			S = S \ sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1])
 			S_lag = S_lag \ sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
 		}
-		//rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] //why constant term?
-		rho_hat[kdx] = ( luinv((S_lag)' * (S_lag)) * (S_lag)'*S )[1,1]
+		rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] //with constant
+		//rho_hat[kdx] = ( luinv((S_lag)' * (S_lag)) * (S_lag)'*S )[1,1] //without constant
+		}
 	}
-	mhat = floor( 1.8171 * ( sum(rho_hat:^2:/(1:-rho_hat):^4) / sum((1:-rho_hat:^2):^2:/(1:-rho_hat):^4) )^(1/3) * T^(1/3) ) + 1
+	
+	if (fe == 0 & constant == 1){
+		rho_hat = J(cols(X) - 1, 1, 0) //no constant term
+		for( kdx = 1 ; kdx <= cols(X) - 1 ; kdx++ ){	
+		utdx = 2
+		tdx = uniq_t[utdx,1]
+		tdx_lag = uniq_t[utdx-1,1]
+		S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) //no sum over units?
+		S_lag = sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
+		for( utdx = 3 ; utdx <= T ; utdx++ ){
+			tdx = uniq_t[utdx,1]
+			tdx_lag = uniq_t[utdx-1,1]
+			S = S \ sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1])
+			S_lag = S_lag \ sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
+		}
+		rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] //with constant
+		//rho_hat[kdx] = ( luinv((S_lag)' * (S_lag)) * (S_lag)'*S )[1,1] //without constant
+		}
+	}
+	
+	
+	mhat = round( 1.8171 * ( sum(rho_hat:^2:/(1:-rho_hat):^4) / sum((1:-rho_hat:^2):^2:/(1:-rho_hat):^4) )^(1/3) * T^(1/3) ) + 1
 	
 	m=mhat  //m takes mhat in default unless lag() is specified.
 	if (la != -1) {
