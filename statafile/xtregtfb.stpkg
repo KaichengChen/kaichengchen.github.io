@@ -1,4 +1,4 @@
-        v 1
+        v 3
         d xtregftb - executes bias-correction approaches to the CHS variance estimator (Chiang, Hansen,
         and Sasaki(2023)) based on Chen and Vogelsang (2023).
 
