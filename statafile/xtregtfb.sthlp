@@ -29,6 +29,7 @@
 
 {phang}
 {cmd:xtregtfb} executes bias-correction approaches to the CHS variance estimator based on {browse "https://arxiv.org/abs/2309.08707": Chen and Vogelsang (2023)}. The reported s.e. is bias-corrected CHS (BCHS) by default.
+
 {title:Options}
 
 {phang}
