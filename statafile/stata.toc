@@ -1,7 +1,7 @@
-v 1
+v 3
 d Materials by Kaicheng Chen
 
-d Here is a supplementary command for "Fixed-b Asymptotics for Panel Models with Two-Way Clustering. Working Paper." 
+d Here is a supplementary command for Fixed-b Asymptotics for Panel Models with Two-Way Clustering, Chen and Vogelsang (2023). 
 
 p xtregtfb A command that executes bias-correction for CHS variance estimator through fixed-b approximation. 
 
