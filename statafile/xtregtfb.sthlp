@@ -1,9 +1,10 @@
 {smcl}
-{* *! version 1.1.1}{...}
+{* *! version 1.0 Apr 11 2024}{...}
 {title:Title}
 
 {phang}
-{bf:xtregtfb} {hline 2} provides bias-correction through fixed-b approximation for the two-way clustering robust standard error proposed by Chiang, Hansen, and Sasaki(2023). 
+{bf:xtregtfb} {hline 2} provides bias-correction through fixed-b approximation for the two-way clustering robust standard error proposed by {browse "https://arxiv.org/abs/2201.11304":Chiang, Hansen, and Sasaki (2022)}.
+
 
 {marker syntax}{...}
 {title:Syntax}
@@ -27,13 +28,45 @@
 {title:Description}
 
 {phang}
-{cmd:xtregtfb} The reported s.e. is bias-corrected CHS (BCCHS) by default. Other types of s.e. can be specified by se() where the options include chs, bchs, dka, bchs, bchsfb, dkafb. The bandwidth is chosen using Eq(6.2) and Eq(6.4) of Andrews(1991) assuming AR(1) process for {V_at} with parameters (rho_a,1-rho_a^2); the bandwidth can also be specified by lag() where any integer between 1 and the time sample size is allowed (by definition, 1 corresponds to CGM s.e.). If se() is specified with bchsfb or dkafb, the simulated fixed-b critical values (for the t-statistics under the null) will be reported at the 97.5% quantile by default. Other quantiles can be specified by level() where the default is 0.05. The critical values are regressor-specific and can be specified by whichvar() where the option is the sequence order among indepvar; the default is 1. cvsim() specifies the number of replications for simulating the fixed-b critical values; the default is 2000. bm() specifies the number of increment for approximating the standard Wiener process; the default is 1000. Other options include noconstant and fe.
+{cmd:xtregtfb} executes bias-correction approaches to the CHS variance estimator based on {browse "https://arxiv.org/abs/2309.08707": Chen and Vogelsang (2023)}. The reported s.e. is bias-corrected CHS (BCHS) by default.
+{title:Options}
 
+{phang}
+{bf:{ul:noc}onstant} {space 8}suppress constant term.
+{p_end}
 
+{phang}
+{bf:fe} {space 16}fixed effects by within-transformation.
+{p_end}
+
+{phang}
+{bf:se(string)} {space 8}specify the variance estimator reported in e(V) and used for constructing the reported t-statistics: can be chs, bchs (default), dka, bchsfb, dkafb.
+{p_end}
+
+{phang}
+{bf:lag(integer)} {space 6}choose the bandwidth (any integer between 1 and the time sample size; by definition, 1 corresponds to CGM s.e.) for the Bartlett kernel; the default bandwidth is chosen using Eq(6.2) and Eq(6.4) of Andrews(1991) assuming AR(1) process, with 0 weight given to the constant term and other weights equal to the inverse squared variances of the estimated AR(1) processes. 
+{marker options}{...}
+{p_end}
+
+{phang}
+{bf:level(real)} {space 7}choose the significance level (of a two-sided test) for which the corresponding simulated fixed-b critical values are reported, if bchsfb or dkafb is specified in se(); the default is 0.05.
+{p_end}
+
+{phang}
+{bf:whichvar(integer)} {space 1}specify the variable for which the simulated fixed-b critical values will be reported: the critical values are regressor-specific and the option is the sequence order among indepvar; the default is 1 (the first non-constant regressor).
+{p_end}
+
+{phang}
+{bf:cvsim(integer)} {space 4}specify the number of replications for simulating the fixed-b critical values; the default is 2000.
+{p_end}
+
+{phang}
+{bf:bm(integer)} {space 7}specify the number of increment for approximating the standard Wiener process; the default is 1000.
+{p_end}
 
 
 {title:Reference}
 
-{p 4 8}K. Chen and T.J. Vogelsang (2023) Fixed-b Asymptotics for Panel Models with Two-Way Clustering. Working Paper.
+{p 4 8}Fixed-b Asymptotics for Panel Models with Two-Way Clustering. {browse "https://arxiv.org/abs/2309.08707": Chen and Vogelsang (2023)}.
 {p_end}
 
