@@ -3,7 +3,7 @@
 {title:Title}
 
 {phang}
-{bf:xtregtfb} {hline 2} provides fixed-b adjustment/bias-correction for the two-way clustering robust standard error proposed by Chiang, Hansen, and Sasaki(2023). 
+{bf:xtregtfb} {hline 2} provides bias-correction through fixed-b approximation for the two-way clustering robust standard error proposed by Chiang, Hansen, and Sasaki(2023). 
 
 {marker syntax}{...}
 {title:Syntax}
