@@ -1,11 +1,11 @@
 ////////////////////////////////////////////////////////////////////////////////
-// STATA FOR Chen and Vogelsang (2023)
-// An adaption from xtregtwo.ado by Chiang, Hansen, Sasaki (2022)
+// STATA command for Chen and Vogelsang (2023)
+// An adaption from xtregtwo.ado for Chiang, Hansen, Sasaki (2022)
 ////////////////////////////////////////////////////////////////////////////////
 //
 //
 
-!* version 17.0  7Apr2024
+!* version 17.0  12Apr2024
 program define xtregtfb, eclass
     version 17.0
  
@@ -50,7 +50,18 @@ program define xtregtfb, eclass
 	if "`se'" == "dkafb" {
 		local type = 4
 	}
-	
+	if "`se'" == "ci" {
+		local type = -1
+	}
+	if "`se'" == "ct" {
+		local type = -2
+	}
+	if "`se'" == "ehw" {
+		local type = -3
+	}
+	if "`se'" == "dk" {
+		local type = -4
+	}
 	
 	mata: estimation("`depvar'","`cnames'","`panelid'","`timeid'",		 ///
 					 "`touse'","`b'","`V'","`N'","`T'","`NT'","`Mhat'",     ///
@@ -80,7 +91,7 @@ program define xtregtfb, eclass
 	ereturn display
 	di "cvBCHS=cvDKA=" `cvDKA'
 	di "Mhat=" `Mhat'
-	di "Note: This command provides fixed-b adjustment/bias-correction for the two-way clustering robust standard error proposed by Chiang, Hansen, and Sasaki(2023). "
+	di "Note: This command provides bias-correction through fixed-b approximation for the two-way clustering robust standard error."
 	di "Reference: K. Chen and T.J. Vogelsang (2023) Fixed-b Asymptotics for Panel Models with Two-Way Clustering. Working Paper."
 end
 ////////////////////////////////////////////////////////////////////////////////
@@ -124,10 +135,6 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 			}	
 			Y[select((1..rows(X))',i:==idx),  1] = Y[select((1..rows(X))',i:==idx),  1] :- mean(Y[select((1..rows(X))',i:==idx),  1])
 		}
-		//X = X[select((1..rows(X))',t:!=uniq_t[1,1]),]
-		//Y = Y[select((1..rows(Y))',t:!=uniq_t[1,1]),]
-		//i = i[select((1..rows(i))',t:!=uniq_t[1,1]),]
-		//t = t[select((1..rows(t))',t:!=uniq_t[1,1]),]
 		uniq_i = uniqrows(i)
 		uniq_t = uniqrows(t)
 		N = rows(uniq_i)
@@ -151,25 +158,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 				Omega_hat_1[jdx,kdx] = Omega_hat_1[jdx,kdx] + sum((X[select((1..rows(X))',i:==idx),jdx]:*Uhat[select((1..rows(X))',i:==idx),1])) * sum((X[select((1..rows(X))',i:==idx),kdx]:*Uhat[select((1..rows(X))',i:==idx),1]))	
 			}
 		}
-	} //I changed the sum over units first (to get R_i and R_i) before multiply each other (it is equivalent).
-	//I deleted the transpose for each (j,k) entry and set kdx from 1 to cols(x) instead of 1 to j (it is equivalent).
-	//Omega_hat_1 = min((N,T)')/N/(N*T^2) :* Omega_hat_1
-	
-/*
-	Omega_hat_dk = J(cols(X),cols(X),0)
-	for( utdx = 1 ; utdx <= T ; utdx++ ){
-		tdx = uniq_t[utdx,1]
-		for( urdx = 1 ; urdx <= T ; urdx++ ){
-			rdx = uniq_t[urdx,1]
-			for( jdx = 1 ; jdx <= cols(X) ; jdx++ ){
-				for( kdx = 1 ; kdx <= jdx ; kdx++ ){
-					
-				}
-			}
-		}
-	}
-	
-*/
+	} 
 	
 	// Omega Hat 2nd Term (leading term of DK)
 	Omega_hat_2 = J(cols(X),cols(X),0)
@@ -178,9 +167,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		for( jdx = 1 ; jdx <= cols(X) ; jdx++ ){
 			for( kdx = 1 ; kdx <= cols(X) ; kdx++ ){
 				Omega_hat_2[jdx,kdx] = Omega_hat_2[jdx,kdx] + sum((X[select((1..rows(X))',t:==tdx),jdx]:*Uhat[select((1..rows(X))',t:==tdx),1])) * sum((X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]))
-	}}} //I changed the sum over units first (to get S_t and S_t+j) before multiply each other (it is equivalent).
-	//I deleted the transpose for each (j,k) entry and set kdx from 1 to cols(x) instead of 1 to j (it is equivalent).
-	//Omega_hat_2 = min((N,T)')/T/(N^2*T) :* Omega_hat_2
+	}}} 
 	
 	// Omega Hat 3rd Term (leading term of NW)
 	Omega_hat_3 = J(cols(X),cols(X),0)
@@ -188,8 +175,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		for( kdx = 1 ; kdx <= jdx ; kdx++ ){
 			Omega_hat_3[jdx,kdx] = (X[,jdx]:*Uhat[,1])' * (X[,kdx]:*Uhat[,1])
 			Omega_hat_3[kdx,jdx] = Omega_hat_3[jdx,kdx]
-	}} // I don't need to change it here (k from 1 to j) because there is no summation step-by-step
-	//Omega_hat_3 = min((N,T)')/(N*T)/(N*T) :* Omega_hat_3
+	}} 
 	
 	// Select M Hat
 	if (fe == 1 | constant == 0){
@@ -198,7 +184,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		utdx = 2
 		tdx = uniq_t[utdx,1]
 		tdx_lag = uniq_t[utdx-1,1]
-		S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) //no sum over units?
+		S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) 
 		S_lag = sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
 		for( utdx = 3 ; utdx <= T ; utdx++ ){
 			tdx = uniq_t[utdx,1]
@@ -249,32 +235,12 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 			for( jdx = 1 ; jdx <= cols(X) ; jdx++ ){
 				for( kdx = 1 ; kdx <= cols(X) ; kdx++ ){
 					temp_Omega_hat_4[jdx,kdx] = temp_Omega_hat_4[jdx,kdx] + sum((X[select((1..rows(X))',t:==tdx),jdx]:*Uhat[select((1..rows(X))',t:==tdx),1])) * sum((X[select((1..rows(X))',t:==tdxminus),kdx]:*Uhat[select((1..rows(X))',t:==tdxminus),1]))
-		}}} //I changed the sum over units first (to get S_t and S_t+j) before multiply each other
+		}}} 
 		temp_Omega_hat_4 = w * temp_Omega_hat_4
 		Omega_hat_4 = Omega_hat_4 + temp_Omega_hat_4
 	}
 	//Omega_hat_4 = min((N,T)')/T :* Omega_hat_4
-	
-	//The original 5th term is just the transpose of the 4th term.
-	/*
-	// Omega Hat 5th Term
-	Omega_hat_5 = J(cols(X),cols(X),0)
-	for( j = 1 ; j <= m-1 ; j++ ){
-		temp_Omega_hat_5 = J(cols(X),cols(X),0)
-		w = 1 - (j/m)
-		for( utdx = (j+1) ; utdx <= T ; utdx++ ){
-			tdx = uniq_t[utdx,1]
-			tdxminus = uniq_t[utdx-j,1]
-			for( jdx = 1 ; jdx <= cols(X) ; jdx++ ){
-				for( kdx = 1 ; kdx <= cols(X) ; kdx++ ){
-					temp_Omega_hat_5[jdx,kdx] = temp_Omega_hat_5[jdx,kdx] + sum((X[select((1..rows(X))',t:==tdxminus),jdx]:*Uhat[select((1..rows(X))',t:==tdxminus),1]) * (X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1])')
-		}}} //this sum was correct
-		temp_Omega_hat_5 = w * temp_Omega_hat_5
-		Omega_hat_5 = Omega_hat_5 + temp_Omega_hat_5
-	}
-	//Omega_hat_5 = min((N,T)')/T :* Omega_hat_5
-	*/
-	
+		
 	// Omega Hat 5th Term
 	Omega_hat_5 = J(cols(X),cols(X),0)
 	for( j = 1 ; j <= m-1 ; j++ ){
@@ -286,17 +252,11 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 			for( jdx = 1 ; jdx <= cols(X) ; jdx++ ){
 				for( kdx = 1 ; kdx <= cols(X) ; kdx++ ){
 					temp_Omega_hat_5[jdx,kdx] = temp_Omega_hat_5[jdx,kdx] + sum((X[select((1..rows(X))',t:==tdxminus),jdx]:*Uhat[select((1..rows(X))',t:==tdxminus),1]) :* (X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]))
-		}}} //this sum was correct
+		}}} 
 		temp_Omega_hat_5 = w * temp_Omega_hat_5
 		Omega_hat_5 = Omega_hat_5 + temp_Omega_hat_5
 	}
 	
-	Omega_hat_3 = J(cols(X),cols(X),0)
-	for( jdx = 1 ; jdx <= cols(X) ; jdx++ ){
-		for( kdx = 1 ; kdx <= jdx ; kdx++ ){
-			Omega_hat_3[jdx,kdx] = (X[,jdx]:*Uhat[,1])' * (X[,kdx]:*Uhat[,1])
-			Omega_hat_3[kdx,jdx] = Omega_hat_3[jdx,kdx]
-	}}
 	
 	// Add the 5 Terms to Get Omega Hat
 	Omega_hat_4 = Omega_hat_4 + Omega_hat_4'
@@ -315,6 +275,10 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	VCHS = luinv(Q_hat) * Omega_hat * luinv(Q_hat)
 	VBCHS = VCHS :/ hb
 	VDKA = luinv(Q_hat) * (Omega_hat_1 :+ (Omega_hat_2 :+ Omega_hat_4) :/ hb) * luinv(Q_hat)
+	VCi = luinv(Q_hat) * Omega_hat_1 * luinv(Q_hat)
+	VCt  = luinv(Q_hat) * Omega_hat_2 * luinv(Q_hat)
+	VEHW = luinv(Q_hat) * Omega_hat_3 * luinv(Q_hat)
+	VDK  = luinv(Q_hat) * (Omega_hat_2 :+ Omega_hat_4) * luinv(Q_hat)
 	
 	//Variance type
 	if (ty == 0 ){
@@ -332,7 +296,18 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	if (ty == 4 ){
 		V=VDKA
 	}
-	
+	if (ty == -1 ){
+		V=VCi
+	}
+	if (ty == -2 ){
+		V=VCt
+	}
+	if (ty == -3 ){
+		V=VEHW
+	}
+	if (ty == -4 ){
+		V=DK
+	}
 	//cv output
 	if (ty>=3){
 	bhat = mhat / T
