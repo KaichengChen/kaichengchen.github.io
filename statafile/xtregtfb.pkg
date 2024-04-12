@@ -1,9 +1,8 @@
-        v 3
-        d xtregtfb - executes bias-correction approaches to the CHS variance estimator (Chiang, Hansen,
-        and Sasaki(2023)) based on Chen and Vogelsang (2023).
+v 3
+d xtregtfb - executes bias-correction approaches to the CHS variance estimator (Chiang, Hansen, and Sasaki(2023)) based on Chen and Vogelsang (2023).
 
-        d An adaption of xtregtwo with various bias-correction approaches included and other features added.
+d An adaption of xtregtwo with various bias-correction approaches included and other features added.
 
-        f xtregtfb.ado
-        f xtregtfb.sthlp
+f xtregtfb.ado
+f xtregtfb.sthlp
 
