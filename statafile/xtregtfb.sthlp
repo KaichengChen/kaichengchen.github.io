@@ -3,8 +3,7 @@
 {title:Title}
 
 {phang}
-{bf:xtregtfb} {hline 2} provides bias-correction through fixed-b approximation for the two-way clustering robust standard error proposed by {browse "https://arxiv.org/abs/2201.11304":Chiang, Hansen, and Sasaki (2022)}.
-
+{bf:xtregtfb} {hline 2} provides bias-correction through fixed-b approximation for the two-way clustering robust standard error.
 
 {marker syntax}{...}
 {title:Syntax}
@@ -28,7 +27,7 @@
 {title:Description}
 
 {phang}
-{cmd:xtregtfb} executes bias-correction approaches to the CHS variance estimator based on {browse "https://arxiv.org/abs/2309.08707": Chen and Vogelsang (2023)}.
+{cmd:xtregtfb} executes various bias-correction approaches to the CHS variance estimator based on {browse "https://arxiv.org/abs/2309.08707": Chen and Vogelsang (2023)}. In default, the bias-corrected CHS (BCCHS) standard error is reported. The simulated fixed-b critical values are reported only if {bf:se(string)} is specified with {bf:bcchsfb} or {bf:dkafb}, which can slow down the computation. More details and other options are described below.
 
 
 
@@ -44,7 +43,7 @@
 {p_end}
 
 {phang}
-{bf:se(string)} {space 8}specify the variance estimator reported in e(V) and used for constructing the reported t-statistics: can be chs, bchs (default), dka, bchsfb, dkafb.
+{bf:se(string)} {space 8}specify the variance estimator reported in e(V) and used for constructing the reported t-statistics: can be {bf:chs}, {bf:bcchs} (default), {bf:dka}, {bf:bcchsfb}, {bf:dkafb}.
 {p_end}
 
 {phang}
@@ -53,7 +52,7 @@
 {p_end}
 
 {phang}
-{bf:level(real)} {space 7}choose the significance level (of a two-sided test) for which the corresponding simulated fixed-b critical values are reported, if bchsfb or dkafb is specified in se(); the default is 0.05.
+{bf:level(real)} {space 7}choose the significance level (of a two-sided test) for which the corresponding simulated fixed-b critical values are reported, if bcchsfb or dkafb is specified in se(); the default is 0.05.
 {p_end}
 
 {phang}
