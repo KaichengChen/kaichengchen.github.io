@@ -21,7 +21,7 @@ program define xtregtfb, eclass
     fvexpand `indepvars' 
     local cnames `r(varlist)'
 
-    tempname b V N T NT Mhat cvDKA cvBCHS
+    tempname b V N T NT Mhat cvDKA cvBCCHS
 
 	local const = 0
 	if "`noconstant'" == "" {
@@ -33,18 +33,18 @@ program define xtregtfb, eclass
 	  local fixedeffect = 0
 	}
 	
-	//0-chs, 1-bchs, 2-dka, 3-bchsfb, 4-dkafb
+	//0-chs, 1-bcchs, 2-dka, 3-bcchsfb, 4-dkafb
 	local type = 3
 	if "`se'" == "chs" {
 		local type = 0
 	}
-	if "`se'" == "bchs" {
+	if "`se'" == "bcchs" {
 		local type = 1
 	}
 	if "`se'" == "dka" {
 		local type = 2
 	}
-	if "`se'" == "bchsfb" {
+	if "`se'" == "bcchsfb" {
 		local type = 3
 	}
 	if "`se'" == "dkafb" {
@@ -66,7 +66,7 @@ program define xtregtfb, eclass
 	mata: estimation("`depvar'","`cnames'","`panelid'","`timeid'",		 ///
 					 "`touse'","`b'","`V'","`N'","`T'","`NT'","`Mhat'",     ///
 					 `const',`fixedeffect', `lag', `type', `level',      ///
-					 "`cvBCHS'", "`cvDKA'", `bm', `cvsim', `whichvar')
+					 "`cvBCCHS'", "`cvDKA'", `bm', `cvsim', `whichvar')
 	
 	local cnames `cnames'
 	if "`noconstant'" == "" & "`fe'" == ""{
@@ -81,7 +81,7 @@ program define xtregtfb, eclass
 	ereturn scalar T    = `T'
 	ereturn scalar NT   = `NT'
 	ereturn scalar Mhat   = `Mhat'
-	ereturn scalar cvBCHS = `cvBCHS'
+	ereturn scalar cvBCCHS = `cvBCCHS'
 	ereturn scalar cvDKA = `cvDKA'
 	ereturn scalar lag = `lag'
 	ereturn scalar level = `level'
@@ -89,7 +89,7 @@ program define xtregtfb, eclass
 	ereturn scalar cvsim = `cvsim'
 	ereturn local  cmd  "xtregtfb"
 	ereturn display
-	di "cvBCHS=cvDKA=" `cvDKA'
+	di "cvBCCHS=cvDKA=" `cvDKA'
 	di "Mhat=" `Mhat'
 	di "Note: This command provides bias-correction through fixed-b approximation for the two-way clustering robust standard error."
 	di "Reference: K. Chen and T.J. Vogelsang (2023) Fixed-b Asymptotics for Panel Models with Two-Way Clustering. Working Paper."
@@ -107,7 +107,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 				string scalar mname,	real scalar constant,				 ///
 				real scalar fe     ,    real scalar la,                      ///
 				real scalar ty     ,    real scalar le,                      ///
-				string scalar cvBCHSname, string scalar cvDKAname,           ///
+				string scalar cvBCCHSname, string scalar cvDKAname,           ///
 				real scalar bm     ,    real scalar cvsim,                   ///
 				real scalar whichv )
 {
@@ -273,7 +273,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	
 	// Variance
 	VCHS = luinv(Q_hat) * Omega_hat * luinv(Q_hat)
-	VBCHS = VCHS :/ hb
+	VBCCHS = VCHS :/ hb
 	VDKA = luinv(Q_hat) * (Omega_hat_1 :+ (Omega_hat_2 :+ Omega_hat_4) :/ hb) * luinv(Q_hat)
 	VCi = luinv(Q_hat) * Omega_hat_1 * luinv(Q_hat)
 	VCt  = luinv(Q_hat) * Omega_hat_2 * luinv(Q_hat)
@@ -285,13 +285,13 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		V=VCHS
 	}
 	if (ty == 1 ){
-		V=VBCHS
+		V=VBCCHS
 	}
 	if (ty == 2 ){
 		V=VDKA
 	}
 	if (ty == 3 ){
-		V=VBCHS
+		V=VBCCHS
 	}
 	if (ty == 4 ){
 		V=VDKA
@@ -369,13 +369,13 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		t_DKA_hat_top = t_CHS_hat_top * (hb)^0.5
 	
 	
-		cvBCHS = (abs(t_DKA_hat_bottom) + t_DKA_hat_top)/2
-		cvDKA  = cvBCHS
+		cvBCCHS = (abs(t_DKA_hat_bottom) + t_DKA_hat_top)/2
+		cvDKA  = cvBCCHS
 	
 	}
 	
 	if (ty<3){
-		cvBCHS = .
+		cvBCCHS = .
 		cvDKA  = .
 	}
 	
@@ -387,7 +387,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	st_numscalar(tname, T)
 	st_numscalar(ntname, N*T)
 	st_numscalar(mname, mhat)
-	st_numscalar(cvBCHSname, cvBCHS)
+	st_numscalar(cvBCCHSname, cvBCCHS)
 	st_numscalar(cvDKAname, cvDKA)
 }
 end
