@@ -43,16 +43,16 @@
 {p_end}
 
 {phang}
-{bf:se(string)} {space 8}specify the variance estimator reported in e(V) and used for constructing the reported t-statistics: can be {bf:chs}, {bf:bcchs} (default), {bf:dka}, {bf:bcchsfb}, {bf:dkafb}.
+{bf:se(string)} {space 8}specify the variance estimator reported in {bf:e(V)} and used for constructing the reported t-statistics: can be {bf:chs}, {bf:bcchs} (default), {bf:dka}, {bf:bcchsfb}, {bf:dkafb}.
 {p_end}
 
 {phang}
-{bf:lag(integer)} {space 6}choose the bandwidth (any integer between 1 and the time sample size; by definition, 1 corresponds to CGM s.e.) for the Bartlett kernel; the default bandwidth is chosen using Eq(6.2) and Eq(6.4) of Andrews(1991) assuming AR(1) process, with 0 weight given to the constant term and other weights equal to the inverse squared variances of the estimated AR(1) processes. 
+{bf:lag(integer)} {space 6}choose the bandwidth (any integer between 1 and the time sample size; by definition, 1 corresponds to CGM s.e.) for the Bartlett kernel; the default bandwidth is reported as {bf:e(Mhat)} is chosen using Eq(6.2) and Eq(6.4) of Andrews(1991) assuming AR(1) process, with 0 weight given to the constant term and other weights equal to the inverse squared variances of the estimated AR(1) processes. 
 {marker options}{...}
 {p_end}
 
 {phang}
-{bf:level(real)} {space 7}choose the significance level (of a two-sided test) for which the corresponding simulated fixed-b critical values are reported, if bcchsfb or dkafb is specified in se(); the default is 0.05.
+{bf:level(real)} {space 7}choose the significance level (of a two-sided test) for which the corresponding simulated fixed-b critical values are reported, if {bf:bcchsfb} or {bf:dkafb} is specified in {bf:se(string)}; the default is 0.05.
 {p_end}
 
 {phang}
