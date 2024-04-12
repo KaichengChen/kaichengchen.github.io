@@ -83,7 +83,7 @@ program define xtregtfb, eclass
 	ereturn scalar Mhat   = `Mhat'
 	ereturn scalar cvBCCHS = `cvBCCHS'
 	ereturn scalar cvDKA = `cvDKA'
-	ereturn scalar lag = `lag'
+	ereturn scalar lag = `Mhat'
 	ereturn scalar level = `level'
 	ereturn scalar bm = `bm'
 	ereturn scalar cvsim = `cvsim'
