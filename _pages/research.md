@@ -17,7 +17,7 @@ with **Kyoo il Kim**
  **"[Another Look at the Linear Probability Model and Nonlinear Index Models](https://arxiv.org/abs/2308.15338)"**\
  with **Robert S. Martin** and **Jeffrey M. Wooldridge**
 
-
  **"[Fixed-b Asymptotics for Panel Models with Two-Way Clustering](https://arxiv.org/abs/2309.08707)"**\
 with **Timothy J. Vogelsang**\
+STATA command installation: *net install xtregtfb*
 (Revise & resubmit at *Journal of Econometrics*)
