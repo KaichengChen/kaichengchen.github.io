@@ -8,6 +8,8 @@ redirect_from:
   - /about.html
 ---
 
+<br />
+
 Hi, I'm a PhD candidate in Economics at Michigan State University. 
 
 My research interests are econometric theory and applied econometrics, with a focus on but not limited to robust inference for panel models, high dimensional models, unobserved heterogeneity, discrete choice, and endogeneity issues. 
