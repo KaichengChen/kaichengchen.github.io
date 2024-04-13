@@ -16,4 +16,4 @@ My research interest lies in econometric theory and applied econometrics, with a
 
 ~~I also love national parks and board games.~~
 
-Feel free to reach out to me at `chenka19@msu.edu` for anything!
+Feel free to reach out to me at `chenka19@msu.edu` for anything.
