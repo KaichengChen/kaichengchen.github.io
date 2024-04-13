@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to Kaicheng's personal website!"
+title: "Welcome to Kaicheng's home page!"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -14,4 +14,4 @@ My research interests are econometric theory and applied econometrics, with a fo
 
 I also love national parks and board games.
 
-Please contact me at `chenka19@msu.edu` for anything!
+Feel free to reach out to me at `chenka19@msu.edu` for anything!
