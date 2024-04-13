@@ -12,8 +12,8 @@ redirect_from:
 
 Hi, I'm a PhD candidate in Economics at Michigan State University. 
 
-My research interests are econometric theory and applied econometrics, with a focus on but not limited to robust inference for panel models, high dimensional models, unobserved heterogeneity, discrete choice, and endogeneity issues. 
+My research interest lies in econometric theory and applied econometrics, with a focus on but not limited to *robust inference for panel models, high dimensional models, unobserved heterogeneity, discrete choice*, and *endogeneity*. 
 
-I also love national parks and board games.
+~~I also love national parks and board games.~~
 
 Feel free to reach out to me at `chenka19@msu.edu` for anything!
