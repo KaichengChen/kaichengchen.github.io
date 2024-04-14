@@ -19,7 +19,7 @@
 {cmd:lag(}{it:bandwidth}{cmd:)}
 {cmd:level(}{it:confidencetwoside}{cmd:)}
 {cmd:bm(}{it:bmincrement}{cmd:)}
-{cmd:cvsim(}{it:simrep}{cmd:)}
+{cmd:rep(}{it:repforsimcv}{cmd:)}
 {cmd:whichvar(}{it:#}{cmd:)}]
 
 
@@ -60,7 +60,7 @@
 {p_end}
 
 {phang}
-{bf:cvsim(integer)} {space 4}specify the number of replications for simulating the fixed-b critical values; the default is 2000.
+{bf:rep(integer)} {space 4}specify the number of replications for simulating the fixed-b critical values; the default is 2000.
 {p_end}
 
 {phang}
