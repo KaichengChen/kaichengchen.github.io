@@ -34,7 +34,7 @@ program define xtregtfb, eclass
 	}
 	
 	//0-chs, 1-bcchs, 2-dka, 3-bcchsfb, 4-dkafb
-	local type = 3
+	local type = 1
 	if "`se'" == "chs" {
 		local type = 0
 	}
@@ -309,7 +309,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		V=DK
 	}
 	//cv output
-	if (ty>=3){
+	if (ty >= 3){
 	bhat = mhat / T
 	c = N / T
 	hbhat = 1-bhat+1/3*bhat^2
@@ -374,7 +374,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	
 	}
 	
-	if (ty<3){
+	if (ty < 3){
 		cvBCCHS = .
 		cvDKA  = .
 	}
@@ -389,6 +389,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	st_numscalar(mname, mhat)
 	st_numscalar(cvBCCHSname, cvBCCHS)
 	st_numscalar(cvDKAname, cvDKA)
+	st_numscalar(ty, ty)	
 }
 end
 ////////////////////////////////////////////////////////////////////////////////
