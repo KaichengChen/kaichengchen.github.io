@@ -6,7 +6,7 @@
 //
 
 !* version 17.0  12Apr2024
-program define xtregtfb, eclass
+program define xtregtfb_test, eclass
     version 17.0
  
     syntax varlist(numeric) [if] [in] [, NOConstant FE lag(real -1) SE(string) level(real 0.05) bm(real 1000) cvsim(real 2000) whichvar(real 1)]
@@ -87,7 +87,7 @@ program define xtregtfb, eclass
 	ereturn scalar level = `level'
 	ereturn scalar bm = `bm'
 	ereturn scalar cvsim = `cvsim'
-	ereturn local  cmd  "xtregtfb"
+	ereturn local  cmd  "xtregtfb_test"
 	ereturn display
 	di "cvBCCHS=cvDKA=" `cvDKA'
 	di "Mhat=" `Mhat'
@@ -282,19 +282,19 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	
 	//Variance type
 	if (ty == 0 ){
-		V=VCHS
+		V= VCHS
 	}
 	if (ty == 1 ){
-		V=VBCCHS
+		V= VBCCHS
 	}
 	if (ty == 2 ){
-		V=VDKA
+		V= VDKA
 	}
 	if (ty == 3 ){
-		V=VBCCHS
+		V= VBCCHS
 	}
 	if (ty == 4 ){
-		V=VDKA
+		V= VDKA
 	}
 	if (ty == -1 ){
 		V = (N*T)/(N*T-cols(X)) * VCi
@@ -306,7 +306,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		V = (N*T)/(N*T-cols(X)) * VEHW
 	}
 	if (ty == -4 ){
-		V=DK
+		V = VDK
 	}
 	//cv output
 	if (ty >= 3){
@@ -388,8 +388,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	st_numscalar(ntname, N*T)
 	st_numscalar(mname, mhat)
 	st_numscalar(cvBCCHSname, cvBCCHS)
-	st_numscalar(cvDKAname, cvDKA)
-	st_numscalar(ty, ty)	
+	st_numscalar(cvDKAname, cvDKA)	
 }
 end
 ////////////////////////////////////////////////////////////////////////////////
