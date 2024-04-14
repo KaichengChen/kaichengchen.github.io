@@ -297,13 +297,13 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		V=VDKA
 	}
 	if (ty == -1 ){
-		V=VCi
+		V = (N*T)/(N*T-cols(X)) * VCi
 	}
 	if (ty == -2 ){
-		V=VCt
+		V = (N*T)/(N*T-cols(X)) * VCt
 	}
 	if (ty == -3 ){
-		V=VEHW
+		V = (N*T)/(N*T-cols(X)) * VEHW
 	}
 	if (ty == -4 ){
 		V=DK
