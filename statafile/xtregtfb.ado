@@ -9,7 +9,7 @@
 program define xtregtfb, eclass
     version 17.0
  
-    syntax varlist(numeric) [if] [in] [, NOConstant FE lag(real -1) SE(string) level(real 0.05) bm(real 1000) cvsim(real 2000) whichvar(real 1)]
+    syntax varlist(numeric) [if] [in] [, NOConstant FE lag(real -1) SE(string) level(real 0.05) bm(real 1000) rep(real 2000) whichvar(real 1)]
     marksample touse
  
 	qui xtset
@@ -66,7 +66,7 @@ program define xtregtfb, eclass
 	mata: estimation("`depvar'","`cnames'","`panelid'","`timeid'",		 ///
 					 "`touse'","`b'","`V'","`N'","`T'","`NT'","`Mhat'",     ///
 					 `const',`fixedeffect', `lag', `type', `level',      ///
-					 "`cvBCCHS'", "`cvDKA'", `bm', `cvsim', `whichvar')
+					 "`cvBCCHS'", "`cvDKA'", `bm', `rep', `whichvar')
 	
 	local cnames `cnames'
 	if "`noconstant'" == "" & "`fe'" == ""{
@@ -86,7 +86,7 @@ program define xtregtfb, eclass
 	ereturn scalar lag = `Mhat'
 	ereturn scalar level = `level'
 	ereturn scalar bm = `bm'
-	ereturn scalar cvsim = `cvsim'
+	ereturn scalar rep = `rep'
 	ereturn local  cmd  "xtregtfb"
 	ereturn display
 	di "cvBCCHS=cvDKA=" `cvDKA'
@@ -108,7 +108,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 				real scalar fe     ,    real scalar la,                      ///
 				real scalar ty     ,    real scalar le,                      ///
 				string scalar cvBCCHSname, string scalar cvDKAname,           ///
-				real scalar bm     ,    real scalar cvsim,                   ///
+				real scalar bm     ,    real scalar rep,                   ///
 				real scalar whichv )
 {
     Y = st_data(., depvar, touse)
@@ -316,7 +316,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	Lambda_ahat = 1/(N^(0.5) * T) * cholesky(Omega_hat_1)
 	Lambda_ghat = 1/(N * T^(0.5)) * cholesky( (Omega_hat_2 :+ Omega_hat_4) / hbhat)
 	
-		t_CHS_hat = J(cvsim, cols(X), 0)
+		t_CHS_hat = J(rep, cols(X), 0)
 		dt = 1/bm
 		
 		R = J(cols(X), cols(X), 0)
@@ -324,7 +324,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 			R[j,j] = 1
 		}
 		
-		for (k=1; k<=cvsim; k++){
+		for (k=1; k<=rep; k++){
 			W = J(bm , cols(X), 0)
 			
 			for (j=1;j<=cols(X); j++){
@@ -356,8 +356,8 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 		}
 		
 		
-		qbottom = floor(le/2*cvsim)
-		qtop = floor((1-le/2)*cvsim)
+		qbottom = floor(le/2*rep)
+		qtop = floor((1-le/2)*rep)
 	
 	
 		t_CHS_hat_1 = t_CHS_hat[.,whichv]
