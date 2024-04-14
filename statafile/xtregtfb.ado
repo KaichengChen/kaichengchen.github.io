@@ -6,7 +6,7 @@
 //
 
 !* version 17.0  12Apr2024
-program define xtregtfb_test, eclass
+program define xtregtfb, eclass
     version 17.0
  
     syntax varlist(numeric) [if] [in] [, NOConstant FE lag(real -1) SE(string) level(real 0.05) bm(real 1000) cvsim(real 2000) whichvar(real 1)]
@@ -87,7 +87,7 @@ program define xtregtfb_test, eclass
 	ereturn scalar level = `level'
 	ereturn scalar bm = `bm'
 	ereturn scalar cvsim = `cvsim'
-	ereturn local  cmd  "xtregtfb_test"
+	ereturn local  cmd  "xtregtfb"
 	ereturn display
 	di "cvBCCHS=cvDKA=" `cvDKA'
 	di "Mhat=" `Mhat'
