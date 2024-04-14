@@ -5,7 +5,7 @@
 //
 //
 
-!* version 17.0  12Apr2024
+!* version 17.0  14Apr2024
 program define xtregtfb, eclass
     version 17.0
  
