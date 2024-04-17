@@ -211,13 +211,13 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 			S = S \ sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1])
 			S_lag = S_lag \ sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
 		}
-		rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] //with constant
-		//rho_hat[kdx] = ( luinv((S_lag)' * (S_lag)) * (S_lag)'*S )[1,1] //without constant
+		//rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] //with constant
+		rho_hat[kdx] = ( luinv((S_lag)' * (S_lag)) * (S_lag)'*S )[1,1] //without constant
 		}
 	}
 	
 	
-	mhat = round( 1.8171 * ( sum(rho_hat:^2:/(1:-rho_hat):^4) / sum((1:-rho_hat:^2):^2:/(1:-rho_hat):^4) )^(1/3) * T^(1/3) ) + 1
+	mhat = floor( 1.8171 * ( sum(rho_hat:^2:/(1:-rho_hat):^4) / sum((1:-rho_hat:^2):^2:/(1:-rho_hat):^4) )^(1/3) * T^(1/3) ) + 1
 	
 	m=mhat  //m takes mhat in default unless lag() is specified.
 	if (la != -1) {
