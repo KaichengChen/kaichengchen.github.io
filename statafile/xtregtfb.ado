@@ -5,7 +5,7 @@
 //
 //
 
-!* version 17.0  17Apr2024
+!* version 17.0  19Apr2024
 program define xtregtfb, eclass
     version 17.0
  
@@ -277,7 +277,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	VBCCHS = VCHS :/ hb
 	VDKA = QI * (Omega_hat_1 :+ (Omega_hat_2 :+ Omega_hat_4) :/ hb) * QI
 	VCi = QI * Omega_hat_1 * QI
-	VCt  = QI * Omega_hat_2 * 
+	VCt  = QI * Omega_hat_2 * QI
 	VEHW = QI * Omega_hat_3 * QI
 	VDK  = QI * (Omega_hat_2 :+ Omega_hat_4) * QI
 	
