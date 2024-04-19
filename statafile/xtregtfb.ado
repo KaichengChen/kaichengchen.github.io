@@ -266,19 +266,20 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	
 	// Q Hat
 	Q_hat = X' * X
+	QI = luinv(Q_hat)
 	
 	//h(b) function
 	bb = m/T 
 	hb = 1 - bb + 1/3 * bb^2
 	
 	// Variance
-	VCHS = luinv(Q_hat) * Omega_hat * luinv(Q_hat)
+	VCHS = QI * Omega_hat * QI
 	VBCCHS = VCHS :/ hb
-	VDKA = luinv(Q_hat) * (Omega_hat_1 :+ (Omega_hat_2 :+ Omega_hat_4) :/ hb) * luinv(Q_hat)
-	VCi = luinv(Q_hat) * Omega_hat_1 * luinv(Q_hat)
-	VCt  = luinv(Q_hat) * Omega_hat_2 * luinv(Q_hat)
-	VEHW = luinv(Q_hat) * Omega_hat_3 * luinv(Q_hat)
-	VDK  = luinv(Q_hat) * (Omega_hat_2 :+ Omega_hat_4) * luinv(Q_hat)
+	VDKA = QI * (Omega_hat_1 :+ (Omega_hat_2 :+ Omega_hat_4) :/ hb) * QI
+	VCi = QI * Omega_hat_1 * QI
+	VCt  = QI * Omega_hat_2 * 
+	VEHW = QI * Omega_hat_3 * QI
+	VDK  = QI * (Omega_hat_2 :+ Omega_hat_4) * QI
 	
 	//Variance type
 	if (ty == 0 ){
