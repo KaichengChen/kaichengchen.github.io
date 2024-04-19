@@ -181,38 +181,36 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	if (fe == 1 | constant == 0){
 		rho_hat = J(cols(X), 1, 0) //no constant term
 		for( kdx = 1 ; kdx <= cols(X) ; kdx++ ){	
-		utdx = 2
-		tdx = uniq_t[utdx,1]
-		tdx_lag = uniq_t[utdx-1,1]
-		S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) 
-		S_lag = sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
-		for( utdx = 3 ; utdx <= T ; utdx++ ){
+			utdx = 2
 			tdx = uniq_t[utdx,1]
 			tdx_lag = uniq_t[utdx-1,1]
-			S = S \ sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1])
-			S_lag = S_lag \ sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
-		}
-		rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] //with constant
-		//rho_hat[kdx] = ( luinv((S_lag)' * (S_lag)) * (S_lag)'*S )[1,1] //without constant
+			S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) 
+			S_lag = sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
+			for( utdx = 3 ; utdx <= T ; utdx++ ){
+				tdx = uniq_t[utdx,1]
+				tdx_lag = uniq_t[utdx-1,1]
+				S = S \ sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1])
+				S_lag = S_lag \ sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
+			}
+			rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] 
 		}
 	}
 	
 	if (fe == 0 & constant == 1){
 		rho_hat = J(cols(X) - 1, 1, 0) //no constant term
 		for( kdx = 1 ; kdx <= cols(X) - 1 ; kdx++ ){	
-		utdx = 2
-		tdx = uniq_t[utdx,1]
-		tdx_lag = uniq_t[utdx-1,1]
-		S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) //no sum over units?
-		S_lag = sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
-		for( utdx = 3 ; utdx <= T ; utdx++ ){
+			utdx = 2
 			tdx = uniq_t[utdx,1]
 			tdx_lag = uniq_t[utdx-1,1]
-			S = S \ sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1])
-			S_lag = S_lag \ sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
-		}
-		//rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] //with constant
-		rho_hat[kdx] = ( luinv((S_lag)' * (S_lag)) * (S_lag)'*S )[1,1] //without constant
+			S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) //no sum over units?
+			S_lag = sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
+			for( utdx = 3 ; utdx <= T ; utdx++ ){
+				tdx = uniq_t[utdx,1]
+				tdx_lag = uniq_t[utdx-1,1]
+				S = S \ sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1])
+				S_lag = S_lag \ sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
+			}
+			rho_hat[kdx] = ( luinv((J(rows(S_lag),1,1),S_lag)' * (J(rows(S_lag),1,1),S_lag)) * (J(rows(S_lag),1,1),S_lag)'*S )[2,1] 
 		}
 	}
 	
