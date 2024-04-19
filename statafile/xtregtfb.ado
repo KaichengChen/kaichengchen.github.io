@@ -219,9 +219,10 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	
 	mhat = floor( 1.8171 * ( sum(rho_hat:^2:/(1:-rho_hat):^4) / sum((1:-rho_hat:^2):^2:/(1:-rho_hat):^4) )^(1/3) * T^(1/3) ) + 1
 	
-	m=mhat  //m takes mhat in default unless lag() is specified.
+	m = min(mhat\T)  //m takes mhat in default unless lag() is specified.
+	
 	if (la != -1) {
-		m=la
+		m = min(la\T)
 	}
 	
 	// Omega Hat 4th Term
