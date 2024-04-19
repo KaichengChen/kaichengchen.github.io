@@ -202,7 +202,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 			utdx = 2
 			tdx = uniq_t[utdx,1]
 			tdx_lag = uniq_t[utdx-1,1]
-			S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) //no sum over units?
+			S = sum(X[select((1..rows(X))',t:==tdx),kdx]:*Uhat[select((1..rows(X))',t:==tdx),1]) 
 			S_lag = sum(X[select((1..rows(X))',t:==tdx_lag),kdx]:*Uhat[select((1..rows(X))',t:==tdx_lag),1])
 			for( utdx = 3 ; utdx <= T ; utdx++ ){
 				tdx = uniq_t[utdx,1]
