@@ -11,7 +11,7 @@ redirect_from:
 <hr>
 
 ## Working Papers
-**"[Identification of Nonseparable Models with Endogenous Control Variables](https://arxiv.org/abs/2401.14395)"**\
+**"[Identification of Nonseparable Models with Endogenous Control Variables](https://arxiv.org/abs/2401.14395''**\
 with **Kyoo il Kim**
 
  **"[Another Look at the Linear Probability Model and Nonlinear Index Models](https://arxiv.org/abs/2308.15338)"**\
