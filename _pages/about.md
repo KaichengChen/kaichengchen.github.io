@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-# Welcome to Kaicheng's home page!
+## Welcome to Kaicheng's home page!
 
 I'm a PhD candidate in Economics at Michigan State University. My research interest lies in econometric theory and applied econometrics, with a focus on but not limited to ***robust inference for panel models***, ***high dimensional regression***, ***unobserved heterogeneity***, ***discrete choice***, and ***endogeneity***. 
 
