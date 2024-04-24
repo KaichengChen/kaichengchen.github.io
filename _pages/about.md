@@ -22,7 +22,7 @@ Please feel free to reach out to me at `chenka19@msu.edu` for anything.
 ---
 
 # NEWS
-:speech_balloon: 08/24 Upcoming presentation in 2024 Econometric Society Interdisciplinary Frontiers Economics and AI+ML Meeting (ESIF-AIML2024) @ Cornell Univeristy.
+:speech_balloon: <span style="font-size:0.5em;"> 08/24 Upcoming presentation in 2024 Econometric Society Interdisciplinary Frontiers Economics and AI+ML Meeting (ESIF-AIML2024) @ Cornell Univeristy.</span> 
 
 :speech_balloon: 06/24 Upcoming presentation in 2024 Asia Meeting of Econometrics Society (AMES2024-China) @ Zhejiang University.
 
