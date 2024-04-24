@@ -6,6 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
+header {
+  display: none;
+}
 
 ## Welcome to Kaicheng's home page!
 
