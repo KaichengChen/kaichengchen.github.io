@@ -2,12 +2,13 @@
 permalink: /
 excerpt: "About me"
 title: null
+{display: none}
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-{display: none}
+
 
 ## Welcome to Kaicheng's home page!
 
