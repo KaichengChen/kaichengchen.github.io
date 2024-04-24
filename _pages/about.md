@@ -8,10 +8,9 @@ redirect_from:
   - /about.html
 ---
 
+<br>
 
-Hi, I'm a PhD candidate in Economics at Michigan State University. 
-
-My research interest lies in econometric theory and applied econometrics, with a focus on but not limited to ***robust inference for panel models***, ***high dimensional regression***, ***unobserved heterogeneity***, ***discrete choice***, and ***endogeneity***. 
+I'm a PhD candidate in Economics at Michigan State University. My research interest lies in econometric theory and applied econometrics, with a focus on but not limited to ***robust inference for panel models***, ***high dimensional regression***, ***unobserved heterogeneity***, ***discrete choice***, and ***endogeneity***. 
 
 *<span style="color:grey">I also love national parks and board games.</span>*
 
