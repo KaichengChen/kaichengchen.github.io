@@ -5,7 +5,7 @@
 //
 //
 
-!* version 17.0  19Apr2024
+!* version 17.0  24Apr2024
 program define xtregtfb, eclass
     version 17.0
  
@@ -215,7 +215,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	}
 	
 	
-	mhat = floor( 1.8171 * ( sum(rho_hat:^2:/(1:-rho_hat):^4) / sum((1:-rho_hat:^2):^2:/(1:-rho_hat):^4) )^(1/3) * T^(1/3) ) + 1
+	mhat = round( 1.8171 * ( sum(rho_hat:^2:/(1:-rho_hat):^4) / sum((1:-rho_hat:^2):^2:/(1:-rho_hat):^4) )^(1/3) * T^(1/3) ) + 1
 	
 	m = min(mhat\T)  //m takes mhat in default unless lag() is specified.
 	
