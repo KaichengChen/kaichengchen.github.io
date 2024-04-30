@@ -5,7 +5,7 @@
 //
 //
 
-!* version 17.0  24Apr2024
+!* version 17.0  30Apr2024
 program define xtregtfb, eclass
     version 17.0
  
@@ -61,6 +61,9 @@ program define xtregtfb, eclass
 	}
 	if "`se'" == "dk" {
 		local type = -4
+	}
+	if "`se'" == "cgm2" {
+		local type = -5
 	}
 	
 	mata: estimation("`depvar'","`cnames'","`panelid'","`timeid'",		 ///
@@ -279,6 +282,7 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	VCt  = QI * Omega_hat_2 * QI
 	VEHW = QI * Omega_hat_3 * QI
 	VDK  = QI * (Omega_hat_2 :+ Omega_hat_4) * QI
+	VCGM2 = QI * (Omega_hat_1 :+ Omega_hat_2) * QI
 	
 	//Variance type
 	if (ty == 0 ){
@@ -307,6 +311,9 @@ void estimation(string scalar depvar, 	string scalar indepvars, 			 ///
 	}
 	if (ty == -4 ){
 		V = VDK
+	}
+	if (ty == -5 ){
+		V = VCGM2
 	}
 	//cv output
 	if (ty >= 3){
