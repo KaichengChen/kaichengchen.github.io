@@ -9,7 +9,7 @@ redirect_from:
 
 ## Working Papers
 
-**"[Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity](https://www.dropbox.com/scl/fi/zsz4p3bh2kizgu2qg6g69/TW_DML_LASSO_CRE.pdf?rlkey=gtj1rsquwf142k7ekzq38ajl4&st=5ar4902h&dl=0)"** (manuscript)
+**\textquotedblleft [Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity](https://www.dropbox.com/scl/fi/zsz4p3bh2kizgu2qg6g69/TW_DML_LASSO_CRE.pdf?rlkey=gtj1rsquwf142k7ekzq38ajl4&st=5ar4902h&dl=0)\textquotedblright** (manuscript)
 
 **"[Identification of Nonseparable Models with Endogenous Control Variables](https://arxiv.org/abs/2401.14395)"**\
 with **Kyoo il Kim**
