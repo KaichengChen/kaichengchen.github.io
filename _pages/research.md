@@ -18,6 +18,6 @@ with **Kyoo il Kim**
  with **Robert S. Martin** and **Jeffrey M. Wooldridge**
 
  **["Fixed-b Asymptotics for Panel Models with Two-Way Clustering"](https://arxiv.org/abs/2309.08707)**\
-with **Timothy J. Vogelsang** (Revise & resubmit at *Journal of Econometrics*) \
+with **Timothy J. Vogelsang** (Accepted at *Journal of Econometrics*) \
 STATA command: ``xtregtfb``. Installation: type ``net from https://kaichengchen.github.io/statafile/`` in STATA
 
