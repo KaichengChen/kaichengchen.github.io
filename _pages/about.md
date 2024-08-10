@@ -17,7 +17,7 @@ I'm a PhD candidate in Economics at Michigan State University. My research inter
 Please feel free to reach out to me at `chenka19@msu.edu` for anything.
 
 ## News 📢 
-<span style="font-size:0.7em;"> 🗞️ 08/24 Fixed-b Asymptotics for Panel Models with Two-Way Clustering accepted by *Journal of Econometrics*.</span> <br>
+<span style="font-size:0.7em;"> 🗞️08/24 Fixed-b Asymptotics for Panel Models with Two-Way Clustering accepted by *Journal of Econometrics*.</span> <br>
 <span style="font-size:0.7em;"> 🗫 08/24 Upcoming presentation in 2024 Econometric Society Interdisciplinary Frontiers Economics and AI+ML Meeting (ESIF-AIML) @ Cornell Univeristy.</span> <br>
 <span style="font-size:0.7em;"> 🗫 07/24 Presentation in 2024 Chinese Economists Society (CES) China Annual Conference @ Zhejiang University.</span> <br>
 <span style="font-size:0.7em;"> 🗫 06/24 Presentation in 2024 Asia Meeting of Econometrics Society (AMES) @ Zhejiang University.</span> <br>
