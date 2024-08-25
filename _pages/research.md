@@ -17,7 +17,8 @@ with **Kyoo il Kim**
  **["Another Look at the Linear Probability Model and Nonlinear Index Models"](https://arxiv.org/abs/2308.15338)**\
  with **Robert S. Martin** and **Jeffrey M. Wooldridge**
 
- **["Fixed-b Asymptotics for Panel Models with Two-Way Clustering"](https://arxiv.org/abs/2309.08707)**\
-with **Timothy J. Vogelsang** (accepted by *Journal of Econometrics*) \
+## Publication
+ **["Fixed-b Asymptotics for Panel Models with Two-Way Clustering"](https://urldefense.com/v3/__https://kwnsfk27.r.eu-west-1.awstrack.me/L0/https:*2F*2Fauthors.elsevier.com*2Fc*2F1jeqY15DjiIwZZ/1/01020191818f3bc6-a9f81387-b4b3-482a-a828-0707e93ed2c4-000000/wgqtxAAfCiwpXf66-aTMLrirVwk=388__;JSUlJQ!!HXCxUKc!xTVZ9jtRRyLUoZNF9HpSpbPWnYUM1OJAeOIIOobZushz2B02iIcvTE4gUKEqz_JnaVF0mJoy0PN24OqVcREH$)**\
+with **Timothy J. Vogelsang** (*Journal of Econometrics*, forthcoming) \
 STATA command: ``xtregtfb``. Installation: type ``net from https://kaichengchen.github.io/statafile/`` in STATA
 
