@@ -37,3 +37,12 @@ redirect_from:
 ![_DSC9404.jpeg](https://s2.loli.net/2023/09/03/LuSM2wFz9vbDaqm.jpg)
 <sub>Local jazz band parade, Bourbon Street, New Orleans, Louisiana.</sub>
 
+![IMG_4259.jpeg](https://s2.loli.net/2024/08/29/Xd5ZI38vnhoJmOR.jpg)
+<sub>Olympic National Park, Washington.</sub>
+
+![_DSC1050.jpeg](https://s2.loli.net/2024/08/29/VKt3RsySbEPnzd5.jpg)
+<sub>Hoh Rainforest, Olympic National Park, Washington.</sub>
+
+![_DSC0924.jpeg](https://s2.loli.net/2024/08/29/3FMRe4ljXasOZbG.jpg)
+<sub>Lake Angeles Trail, Olympic National Park, Washington.</sub>
+
