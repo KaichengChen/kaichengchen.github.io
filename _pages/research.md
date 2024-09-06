@@ -9,7 +9,7 @@ redirect_from:
 
 ## Working Papers
 
-**["Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"]([https://www.dropbox.com/scl/fi/zsz4p3bh2kizgu2qg6g69/TW_DML_LASSO_CRE.pdf?rlkey=gtj1rsquwf142k7ekzq38ajl4&st=5ar4902h&dl=0](https://www.dropbox.com/scl/fi/b6w8i7ot4m89mk3585z63/TW_DML_LASSO_CRE.pdf?rlkey=l80pojbybltom48kps8bxmyv7&st=psizy1bt&dl=0))** (latest manuscript)
+**["Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"](https://www.dropbox.com/scl/fi/b6w8i7ot4m89mk3585z63/TW_DML_LASSO_CRE.pdf?rlkey=l80pojbybltom48kps8bxmyv7&st=psizy1bt&dl=0)** (latest manuscript)
 
 
 **["Identification of Nonseparable Models with Endogenous Control Variables"](https://arxiv.org/abs/2401.14395)**\
