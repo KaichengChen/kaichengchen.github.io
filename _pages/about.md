@@ -10,7 +10,7 @@ redirect_from:
 
 ## Welcome to Kaicheng's home page!
 
-I'm a PhD candidate in Economics at Michigan State University. My research interest lies in econometrics, with a focus on but not limited to ***robust inference for panel models***, ***high dimensional regression***, ***unobserved heterogeneity***, ***discrete choice***, and ***endogeneity***. I am on the 2024-2025 job market.  
+I'm a PhD candidate in Economics at Michigan State University. My research interest lies in econometrics, with a focus on but not limited to ***robust inference for panel models***, ***high dimensional models***, ***unobserved heterogeneity***, ***endogeneity issues***, ***discrete choice models***, and ***treatment effect models***. I am on the 2024-2025 job market.
 
 *<span style="color:grey">I also love national parks ⛺ and board games ♜.</span>*
 
