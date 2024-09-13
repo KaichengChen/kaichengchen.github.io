@@ -14,7 +14,7 @@ I'm a PhD candidate in Economics at Michigan State University. My research inter
 
 *<span style="color:grey">I also love national parks ⛺ and board games ♜.</span>*
 
-Please feel free to reach out to me at `chenka19@msu.edu`.
+Please feel free to reach me at `chenka19@msu.edu`.
 
 ## News 📢 
 <span style="font-size:0.7em;"> 🗫 08/24 Presentation in 2024 Econometric Society Interdisciplinary Frontiers Economics and AI+ML Meeting (ESIF-AIML) @ Cornell Univeristy.</span> <br>
