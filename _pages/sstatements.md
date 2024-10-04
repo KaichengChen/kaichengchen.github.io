@@ -9,7 +9,7 @@ redirect_from:
 
 ## Teaching Statement
 <details>
-<summary>My passion for teaching began long before I entered graduate school. Precisely, it was on a flight to Singapore as a high school group field trip back in 2011. Seated next to our supervising teacher, I was killing time with my 3-by-3 Rubik's Cube, which was a trend in school. It was a long trip from Shanghai</summary>
+<summary>My passion for teaching began long before I entered graduate school. Precisely, it was on a flight to Singapore as a high school group field trip back in 2011. Seated next to our supervising teacher, I was killing time with my 3-by-3 Rubik's Cube, which was a trend in school. It was a long trip from Shanghai...</summary>
 
 and likely our supervisor was bored so she asked me if I could teach her how to solve it and said she never succeeding learning it. I certainly wasn’t an expert—I could barely finish it in under a minute—but I started sharing what I knew. I remember it was due to a line like "Instead of letting the blocks find the edge, you should let the edge pick up the blocks" that she told me it was a eureka moment for her and that she believed I could be very a good teacher. 
 
