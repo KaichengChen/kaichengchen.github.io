@@ -19,7 +19,7 @@ Panel data allows for the modeling of unobserved heterogeneity, which increases 
 ## Working Papers
 
 **["Identification of Nonseparable Models with Endogenous Control Variables"](https://arxiv.org/abs/2401.14395)**\
-with **Kyoo il Kim**\
+with **Kyoo il Kim**
  <details>
 <summary>Abstract</summary>
 We study identification of the treatment effects in a class of nonseparable models with the presence of potentially endogenous control variables. We show that given the treatment variable and the controls are measurably separated, the usual conditional independence condition or availability of excluded instrument suffices for identification.
@@ -27,7 +27,7 @@ We study identification of the treatment effects in a class of nonseparable mode
 
 
 **["Another Look at the Linear Probability Model and Nonlinear Index Models"](https://arxiv.org/abs/2308.15338)**\
- with **Robert S. Martin** and **Jeffrey M. Wooldridge**\
+ with **Robert S. Martin** and **Jeffrey M. Wooldridge**
  <details>
 <summary>Abstract</summary>
 We reassess the use of linear models to approximate response probabilities of binary outcomes, focusing on average partial effects (APEs). We confirm that linear projection parameters coincide with APEs in certain scenarios. Through simulations, we identify other cases where the linear projection does or does not approximate APEs and find that having a large fraction of fitted values in [0,1] is neither necessary nor sufficient. We also show nonlinear least squares estimation of the ramp model is consistent and asymptotically normal and is equivalent to using OLS on an iteratively trimmed sample to reduce bias. Our findings offer practical guidance for empirical research.
