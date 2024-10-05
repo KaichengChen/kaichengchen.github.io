@@ -30,18 +30,18 @@ We study identification of the treatment effects in a class of nonseparable mode
  with **Robert S. Martin** and **Jeffrey M. Wooldridge**\
  <details>
 <summary>Abstract</summary>
-We reassess the use of linear models to approximate response probabilities of binary outcomes, focusing on average partial effects (APEs). We confirm that linear projection parameters coincide with APEs in certain scenarios. Through simulations, we identify other cases where the linear projection does or does not approximate APEs and find that having a large fraction of fitted values in $[0,1]$ is neither necessary nor sufficient. We also show nonlinear least squares estimation of the ramp model is consistent and asymptotically normal and is equivalent to using OLS on an iteratively trimmed sample to reduce bias. Our findings offer practical guidance for empirical research.
+We reassess the use of linear models to approximate response probabilities of binary outcomes, focusing on average partial effects (APEs). We confirm that linear projection parameters coincide with APEs in certain scenarios. Through simulations, we identify other cases where the linear projection does or does not approximate APEs and find that having a large fraction of fitted values in [0,1] is neither necessary nor sufficient. We also show nonlinear least squares estimation of the ramp model is consistent and asymptotically normal and is equivalent to using OLS on an iteratively trimmed sample to reduce bias. Our findings offer practical guidance for empirical research.
 </details>
 
 ## Publication
-**["Fixed-$b$ Asymptotics for Panel Models with Two-Way Clustering"](https://urldefense.com/v3/__https://kwnsfk27.r.eu-west-1.awstrack.me/L0/https:*2F*2Fauthors.elsevier.com*2Fc*2F1jeqY15DjiIwZZ/1/01020191818f3bc6-a9f81387-b4b3-482a-a828-0707e93ed2c4-000000/wgqtxAAfCiwpXf66-aTMLrirVwk=388__;JSUlJQ!!HXCxUKc!xTVZ9jtRRyLUoZNF9HpSpbPWnYUM1OJAeOIIOobZushz2B02iIcvTE4gUKEqz_JnaVF0mJoy0PN24OqVcREH$)**\
+**["Fixed-b Asymptotics for Panel Models with Two-Way Clustering"](https://urldefense.com/v3/__https://kwnsfk27.r.eu-west-1.awstrack.me/L0/https:*2F*2Fauthors.elsevier.com*2Fc*2F1jeqY15DjiIwZZ/1/01020191818f3bc6-a9f81387-b4b3-482a-a828-0707e93ed2c4-000000/wgqtxAAfCiwpXf66-aTMLrirVwk=388__;JSUlJQ!!HXCxUKc!xTVZ9jtRRyLUoZNF9HpSpbPWnYUM1OJAeOIIOobZushz2B02iIcvTE4gUKEqz_JnaVF0mJoy0PN24OqVcREH$)**\
 with **Timothy J. Vogelsang** (*Journal of Econometrics*, 2024, 244(1): 105831) \
 STATA command: ``xtregtfb``. Installation: type ``net from https://kaichengchen.github.io/statafile/`` in STATA \
 <details>
 <summary>Abstract</summary>
 This paper studies a cluster robust variance estimator proposed by Chiang, Hansen and Sasaki (2024) for linear panels. First, we show algebraically that this variance estimator (CHS estimator, hereafter) is a linear combination of three common variance estimators: the one-way unit cluster estimator, the "HAC of averages" estimator, and the
-"average of HACs" estimator. Based on this finding, we obtain a fixed-$b$ asymptotic result for the CHS estimator and corresponding test statistics as the cross-section and time sample sizes jointly go to infinity. Furthermore, we propose two simple bias-corrected versions of the variance estimator and derive the fixed-$b$ limits. In a
-simulation study, we find that the two bias-corrected variance estimators along with fixed-$b$ critical values provide improvements in finite sample coverage probabilities. We illustrate the impact of bias-correction and use of the fixed-$b$ critical values on inference in an empirical example on the relationship between industry profitability and market concentration.
+"average of HACs" estimator. Based on this finding, we obtain a fixed-b asymptotic result for the CHS estimator and corresponding test statistics as the cross-section and time sample sizes jointly go to infinity. Furthermore, we propose two simple bias-corrected versions of the variance estimator and derive the fixed-b limits. In a
+simulation study, we find that the two bias-corrected variance estimators along with fixed-b critical values provide improvements in finite sample coverage probabilities. We illustrate the impact of bias-correction and use of the fixed-b critical values on inference in an empirical example on the relationship between industry profitability and market concentration.
 </details>
 
 
