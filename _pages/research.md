@@ -38,7 +38,7 @@ We reassess the use of linear models to approximate response probabilities of bi
 with **Timothy J. Vogelsang** (*Journal of Econometrics*, 2024, 244(1): 105831) \
 STATA command: ``xtregtfb``. Installation: type ``net from https://kaichengchen.github.io/statafile/`` in STATA \
 <details>
-<symmary>Abstract</symmary>
+<summary>Abstract</summary>
 This paper studies a cluster robust variance estimator proposed by Chiang, Hansen and Sasaki (2024) for linear panels. First, we show algebraically that this variance estimator (CHS estimator, hereafter) is a linear combination of three common variance estimators: the one-way unit cluster estimator, the "HAC of averages" estimator, and the
 "average of HACs" estimator. Based on this finding, we obtain a fixed-$b$ asymptotic result for the CHS estimator and corresponding test statistics as the cross-section and time sample sizes jointly go to infinity. Furthermore, we propose two simple bias-corrected versions of the variance estimator and derive the fixed-$b$ limits. In a
 simulation study, we find that the two bias-corrected variance estimators along with fixed-$b$ critical values provide improvements in finite sample coverage probabilities. We illustrate the impact of bias-correction and use of the fixed-$b$ critical values on inference in an empirical example on the relationship between industry profitability and market concentration.
