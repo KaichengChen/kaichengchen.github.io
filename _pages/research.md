@@ -9,7 +9,8 @@ redirect_from:
 
 ## Job Market Paper
 
-**["Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"](https://www.dropbox.com/scl/fi/b6w8i7ot4m89mk3585z63/TW_DML_LASSO_CRE.pdf?rlkey=l80pojbybltom48kps8bxmyv7&st=psizy1bt&dl=0)**\ 
+**["Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"](https://www.dropbox.com/scl/fi/b6w8i7ot4m89mk3585z63/TW_DML_LASSO_CRE.pdf?rlkey=l80pojbybltom48kps8bxmyv7&st=psizy1bt&dl=0)**\
+
 (latest manuscript)
 <details>
 <summary>Abstract</summary>
