@@ -17,7 +17,7 @@ I'm a PhD candidate in Economics at Michigan State University. My research inter
 Please feel free to reach me at `chenka19@msu.edu`.
 
 ## News 📢 
-<span style="font-size:0.7em;"> 🗣️ 11/24 "Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity" received the Best Student Paper Award of MEG2024.</span> <br>
+<span style="font-size:0.7em;"> 🏆 11/24 "Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity" received the Best Student Paper Award of MEG2024.</span> <br>
 <span style="font-size:0.7em;"> 🗣️ 11/24 Presentation in 2024 Meeting of the Midwest Econometrics Group (MEG) @ University of Kentucky.</span> <br>
 <span style="font-size:0.7em;"> 🗣️ 08/24 Presentation in 2024 Econometric Society Interdisciplinary Frontiers Economics and AI+ML Meeting (ESIF-AIML) @ Cornell Univeristy.</span> <br>
 <span style="font-size:0.7em;"> 🗞️ 08/24 "Fixed-b Asymptotics for Panel Models with Two-Way Clustering" accepted by *Journal of Econometrics*.</span> <br>
