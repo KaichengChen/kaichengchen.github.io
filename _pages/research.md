@@ -11,6 +11,7 @@ redirect_from:
 
 **"Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"**  
 **Best Student Paper Award**, 2024 Midwest Econometrics Group Meeting
+
 [latest version](https://kaichengchen.github.io/TW_DML_LASSO_CRE.pdf)
 <details>
 <summary>Abstract</summary>
