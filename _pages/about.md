@@ -10,13 +10,15 @@ redirect_from:
 
 ## Welcome to Kaicheng's home page!
 
-I'm a PhD candidate in Economics at Michigan State University. My research interest lies in econometrics, with a focus on but not limited to ***high-dimensional methods for panel and times series data***, ***robust inference for panel models***, ***fixed-smoothing inference***, ***unobserved heterogeneous effects***, ***discrete choice models***, and ***endogeneity***. I am on the 2024-2025 job market.
+I'm a PhD candidate in Economics at Michigan State University. I will join the School of Economics at Shanghai University of Finance and Economics as an assistant professor. My research interest lies in econometrics, with a focus on but not limited to ***high-dimensional methods for panel and times series data***, ***robust inference for panel models***, ***fixed-smoothing inference***, ***unobserved heterogeneous effects***, ***discrete choice models***, and ***endogeneity***. 
 
 *<span style="color:grey">I also love national parks ⛺ and board games ♜.</span>*
 
 Please feel free to reach me at `chenka19@msu.edu`.
 
 ## News 📢 
+
+<span style="font-size:0.7em;"> 💼 03/2025 Upcoming presentation at 2025 Chinese Economists Society (CES) North America Annual Conference @ University of Michigan.</span> <br>
 <span style="font-size:0.7em;"> 🍀 11/2024 "Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity" received the Best Student Paper Award at MEG2024.</span> <br>
 <span style="font-size:0.7em;"> 💼 11/2024 Presentation at 2024 Meeting of the Midwest Econometrics Group (MEG) @ University of Kentucky.</span> <br>
 <span style="font-size:0.7em;"> 💼 08/2024 Presentation at 2024 Econometric Society Interdisciplinary Frontiers Economics and AI+ML Meeting (ESIF-AIML) @ Cornell Univeristy.</span> <br>
