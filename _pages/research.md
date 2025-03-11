@@ -20,12 +20,12 @@ Panel data allows for the modeling of unobserved heterogeneity, which significan
 
 ## Working Papers
 
-***"Identification of Partial Effects with Bad/Endogenous Controls"***\
+***"Identification of Partial Effects with Endogenous Controls"***\
 with **Kyoo il Kim** \
 [arXiv](https://arxiv.org/abs/2401.14395) &nbsp; [latest version](https://kaichengchen.github.io/endogenous_control.pdf)
  <details>
 <summary>Abstract</summary>
-Exogeneity of the treatment needed for identification are often achieved by conditioning. While control variables are explicitly or implicitly assumed to be exogenous, it is common to encounter endogenous controls in practice. It brings a dilemma: without controlling, the treatment may be endogenous; with controlling, the endogeneity of controls may pollute the identification. The problem is not solved with an instrumental variable when it is only conditionally valid and controls are endogenous. We provide an alternative identification for both cases under an extra measurable separability condition between the treatment and the controls. Noticeably, this condition permits the controls to be influenced by the treatment, effectively allowing for bad controls to some extent. The theoretical results apply to a wide class of models including linear, nonlinear, and non-separable models. Monte Carlo simulations exemplify this prevalent issue and demonstrate the performance of the proposed methods in finite sample. 
+Exogeneity of the treatment needed for identification are often achieved by conditioning. While control variables are explicitly or implicitly assumed to be exogenous, it is common to encounter endogenous controls in practice. It brings a dilemma: without controlling, the treatment may be endogenous; with controlling, the endogeneity of controls may pollute the identification. The problem is not solved with an instrumental variable when it is only conditionally valid and controls are endogenous. We provide identification results for local average response under an extra measurable separability condition between the treatment and the controls. Noticeably, this condition permits the controls to be dependent on the treatment. The results apply to a wide class of models ranging from linear to non-separable ones. Monte Carlo simulations exemplify this prevalent issue and demonstrate the performance of the proposed methods in finite sample.
  </details>
 
 
