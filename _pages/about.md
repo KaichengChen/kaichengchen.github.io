@@ -10,7 +10,7 @@ redirect_from:
 
 ## Welcome to Kaicheng's home page!
 
-I'm a PhD candidate in Economics at Michigan State University. I will be joining the School of Economics at Shanghai University of Finance and Economics as an assistant professor. My research interest lies in econometrics, with a focus on but not limited to ***high-dimensional methods for panel and times series data***, ***robust inference for panel models***, ***fixed-smoothing inference***, ***unobserved heterogeneous effects***, ***discrete choice models***, and ***endogeneity***. 
+I'm a PhD candidate in Economics at Michigan State University. I will be joining the School of Economics at Shanghai University of Finance and Economics as an assistant professor. My research interest lies in econometrics, with a focus on but not limited to ***high-dimensional methods for panel and times series data***, ***robust inference for panel models***, ***fixed-smoothing inference***, and ***discrete choice models***. 
 
 *<span style="color:grey">I also love national parks ⛺ and board games ♜.</span>*
 
