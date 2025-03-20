@@ -7,7 +7,8 @@ redirect_from:
   - /research
 ---
 
-## Job Market Paper
+
+## Working Papers
 
 ***"Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"***  \
 **Best Student Paper Award**, 2024 Midwest Econometrics Group Meeting \
@@ -16,9 +17,6 @@ redirect_from:
 <summary>Abstract</summary>
 Panel data allows for the modeling of unobserved heterogeneity, which significantly increases the number of nuisance parameters, making high dimensionality a practical issue rather than just a theoretical concern. However, unobserved heterogeneity, along with potential temporal and cross-sectional dependence in panel data, further complicates estimation and inference for high-dimensional models. This paper proposes a toolkit for robust estimation and inference in high-dimensional panel models with large cross-sectional and time sample sizes. To reduce the dimensionality, I propose a weighted LASSO using two-way cluster-robust penalty weights. Due to the cluster dependence driven by the underlying components, the rate of convergence is slow even in an oracle case. Nevertheless, by leveraging a clustered-panel cross-fitting approach for bias-correction, the asymptotic normality on low-dimensional parameters can be established using the weighted LASSO for nuisance estimation. As a special case, in a partial linear model with non-additive unobserved time and unit effects, inferential results are also established using the full sample. In a panel estimation of the government spending multiplier, I demonstrate how high dimensionality can be hidden and how the proposed toolkit enables flexible modeling and robust inference.
 </details>
-
-
-## Working Papers
 
 ***"Identification of Partial Effects with Endogenous Controls"***\
 with **Kyoo il Kim** \
