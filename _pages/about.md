@@ -18,7 +18,8 @@ Please feel free to reach me at `chenka19@msu.edu`.
 
 ## News 📢 
 
-<span style="font-size:0.7em;"> 💼 03/2025 Upcoming presentation at 2025 Chinese Economists Society (CES) North America Annual Conference @ University of Michigan.</span> <br>
+<span style="font-size:0.7em;"> 💼 08/2025 Upcoming presentation at 2025 World Congress of the Econometric Society (ESWC) @ Coex, Seoul.</span> <br>
+<span style="font-size:0.7em;"> 💼 03/2025 Presentation at 2025 Chinese Economists Society (CES) North America Annual Conference @ University of Michigan.</span> <br>
 <span style="font-size:0.7em;"> 🍀 11/2024 "Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity" received the Best Student Paper Award at MEG2024.</span> <br>
 <span style="font-size:0.7em;"> 💼 11/2024 Presentation at 2024 Meeting of the Midwest Econometrics Group (MEG) @ University of Kentucky.</span> <br>
 <span style="font-size:0.7em;"> 💼 08/2024 Presentation at 2024 Econometric Society Interdisciplinary Frontiers Economics and AI+ML Meeting (ESIF-AIML) @ Cornell Univeristy.</span> <br>
