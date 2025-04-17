@@ -40,7 +40,7 @@ We reassess the use of linear models for binary responses, focusing on average p
 ***"Fixed-b Asymptotics for Panel Models with Two-Way Clustering"***\
 with **Timothy J. Vogelsang** (*Journal of Econometrics*, 2024, 244(1): 105831) \
 [arXiv](https://arxiv.org/abs/2309.08707) &nbsp; [published version](https://www.sciencedirect.com/science/article/abs/pii/S0304407624001763)\
-STATA command: ``xtregtfb``. Installation: type ``net from https://kaichengchen.github.io/statafile/`` in STATA \
+STATA command: ``xtregtfb``. Installation: type ``net from https://kaichengchen.github.io/statafile/`` in STATA 
 <details>
 <summary>Abstract</summary>
 This paper studies a cluster robust variance estimator proposed by Chiang, Hansen and Sasaki (2024) for linear panels. First, we show algebraically that this variance estimator (CHS estimator, hereafter) is a linear combination of three common variance estimators: the one-way unit cluster estimator, the "HAC of averages" estimator, and the
