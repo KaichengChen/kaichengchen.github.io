@@ -10,11 +10,11 @@ redirect_from:
 
 ## Welcome to Kaicheng's home page!
 
-I will be joining the School of Economics at Shanghai University of Finance and Economics as an Assistant Professor. I obtained my PhD in Economics from Michigan State University. My research interest lies in econometrics, with a focus on but not limited to ***high-dimensional methods for panel and times series data***, ***robust inference for panel models***, ***fixed-smoothing inference***, and ***discrete choice models***. 
+I am an Assistant Proferssor in the School of Econopmics at Shanghai University of Finance and Economics (SUFE). I obtained my PhD in Economics from Michigan State University. My research interest lies in econometrics broadly, with a focus on ***high-dimensional methods for panel and times series data***, ***robust inference for panel models***, ***fixed-smoothing inference***, and ***discrete choice models***. 
 
 *<span style="color:grey">I also love national parks ⛺ and board games ♜.</span>*
 
-Please feel free to reach me at `chenka19@msu.edu`.
+Please feel free to reach me at `chenkaicheng@sufe.edu.cn`.
 
 ## News 📢 
 
