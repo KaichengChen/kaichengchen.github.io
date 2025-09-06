@@ -18,7 +18,7 @@ Please feel free to reach me at `chenkaicheng@sufe.edu.cn`.
 
 ## News 📢 
 
-<span style="font-size:0.7em;"> 💼 08/2025 Upcoming presentation at 2025 World Congress of the Econometric Society (ESWC) @ Coex, Seoul.</span> <br>
+<span style="font-size:0.7em;"> 💼 08/2025 Presentation at 2025 World Congress of the Econometric Society (ESWC) @ Coex, Seoul.</span> <br>
 <span style="font-size:0.7em;"> 🎓 05/2025 Conferral of my PhD degree in Economics.</span> <br>
 <span style="font-size:0.7em;"> 💼 03/2025 Presentation at 2025 Chinese Economists Society (CES) North America Annual Conference @ University of Michigan.</span> <br>
 <span style="font-size:0.7em;"> 🍀 11/2024 "Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity" received the Best Student Paper Award at MEG2024.</span> <br>
