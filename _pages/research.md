@@ -12,8 +12,7 @@ redirect_from:
 
 ***"Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"***  \
 **Best Student Paper Award**, 2024 Midwest Econometrics Group Meeting \
-[arXiv](https://arxiv.org/abs/2504.18772) &nbsp; [latest version](https://kaichengchen.github.io/TW_DML_LASSO_CRE.pdf)\
-[Code and Replication Material](http://kaichengchen.github.io/twlasso_paneldml_replication.zip)
+[arXiv](https://arxiv.org/abs/2504.18772) &nbsp; [latest version](https://kaichengchen.github.io/TW_DML_LASSO_CRE.pdf) &nbsp; [Code and Replication Material](http://kaichengchen.github.io/twlasso_paneldml_replication.zip)
 <details>
 <summary>Abstract</summary>
 Panel data allows for the modeling of unobserved heterogeneity, significantly raising the number of nuisance parameters and making high dimensionality a practical issue. Meanwhile, temporal and cross-sectional dependence in panel data further complicates high-dimensional estimation and inference. This paper proposes a toolkit for high-dimensional panel models with large cross-sectional and time sample sizes. To reduce the dimensionality, I propose a variant of LASSO for two-way clustered panels. While being consistent, the convergence rate of LASSO is slow due to the cluster dependence, rendering inference challenging in general. Nevertheless, asymptotic normality can be established in a semiparametric moment-restriction model by leveraging a clustered-panel cross-fitting approach and, as a special case, in a partial linear model using the full sample. In an exercise of estimating multiplier using panel data, I demonstrate how high dimensionality could be hidden and the proposed toolkit enables flexible modeling and robust inference.
