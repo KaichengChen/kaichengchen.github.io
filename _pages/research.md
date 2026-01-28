@@ -11,7 +11,7 @@ redirect_from:
 ## Working Papers
 
 ***"Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"***  \
-**Best Student Paper Award**, 2024 Midwest Econometrics Group Meeting \
+Best Student Paper Award at *2024 Midwest Econometrics Group Meeting* \
 [arXiv](https://arxiv.org/abs/2504.18772) &nbsp; [latest version](https://kaichengchen.github.io/TW_DML_LASSO_CRE.pdf) &nbsp; [code & replication material](http://kaichengchen.github.io/twlasso_paneldml_replication.zip)
 <details>
 <summary>Abstract</summary>
@@ -28,7 +28,7 @@ In models with endogenous treatments, researchers often leverage the conditional
 
 
 ***"Another Look at the Linear Probability Model and Nonlinear Index Models"***\
- with **Robert S. Martin** and **Jeffrey M. Wooldridge** (Revise & Resubmit at *Econometric Reviews*) \ 
+ with **Robert S. Martin** and **Jeffrey M. Wooldridge** (Revise & Resubmit at *Econometric Reviews*) \
 [arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/LPM_CMW.pdf) &nbsp; [code & replication material](https://kaichengchen.github.io/lpm_simulation_post.rar)
  <details>
 <summary>Abstract</summary>
