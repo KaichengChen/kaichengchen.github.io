@@ -12,7 +12,7 @@ redirect_from:
 
 ***"Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"***  \
 Best Student Paper Award at *2024 Midwest Econometrics Group Meeting* \
-[arXiv](https://arxiv.org/abs/2504.18772) &nbsp; [latest version](https://kaichengchen.github.io/TW_DML_LASSO_CRE.pdf) &nbsp; [code & replication material](http://kaichengchen.github.io/twlasso_paneldml_replication.zip)
+[arXiv](https://arxiv.org/abs/2504.18772) &nbsp; [latest version](https://kaichengchen.github.io/TW_DML_LASSO_CRE.pdf) &nbsp; [code & replication](http://kaichengchen.github.io/twlasso_paneldml_replication.zip)
 <details>
 <summary>Abstract</summary>
 Panel data allows for the modeling of unobserved heterogeneity, significantly raising the number of nuisance parameters and making high dimensionality a practical issue. Meanwhile, temporal and cross-sectional dependence in panel data further complicates high-dimensional estimation and inference. This paper proposes a toolkit for high-dimensional panel models with large cross-sectional and time sample sizes. To reduce the dimensionality, I propose a variant of LASSO for two-way clustered panels. While being consistent, the convergence rate of LASSO is slow due to the cluster dependence, rendering inference challenging in general. Nevertheless, asymptotic normality can be established in a semiparametric moment-restriction model by leveraging a clustered-panel cross-fitting approach and, as a special case, in a partial linear model using the full sample. In an exercise of estimating multiplier using panel data, I demonstrate how high dimensionality could be hidden and the proposed toolkit enables flexible modeling and robust inference.
@@ -29,7 +29,7 @@ In models with endogenous treatments, researchers often leverage the conditional
 
 ***"Another Look at the Linear Probability Model and Nonlinear Index Models"***\
  with **Robert S. Martin** and **Jeffrey M. Wooldridge** (Revise & Resubmit at *Econometric Reviews*) \
-[arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/LPM_CMW.pdf) &nbsp; [code & replication material](https://kaichengchen.github.io/lpm_simulation_post.rar)
+[arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/LPM_CMW.pdf) &nbsp; [code & replication](https://kaichengchen.github.io/lpm_simulation_post.rar)
  <details>
 <summary>Abstract</summary>
 We reassess the use of linear models for binary responses, focusing on average partial effects (APEs). We confirm that under certain conditions, linear projection parameters correspond to APEs even when the true model is nonlinear. Simulations demonstrate a large fraction of fitted values in [0, 1] is neither necessary nor sufficient for OLS to approximate the APEs. To reduce bias, excluding observations with fitted values outside [0, 1] has been proposed. We show that iteratively trimming the sample is equivalent to nonlinear least squares estimation of a piece-wise linear (ramp) model, for which we establish consistency and asymptotic normality results.
