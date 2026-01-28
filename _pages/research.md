@@ -28,7 +28,7 @@ In models with endogenous treatments, researchers often leverage the conditional
 
 
 ***"Another Look at the Linear Probability Model and Nonlinear Index Models"***\
- with **Robert S. Martin** and **Jeffrey M. Wooldridge**\ (*Revise and Resubmit* at *Econometric Reviews*)
+ with **Robert S. Martin** and **Jeffrey M. Wooldridge** (*Revise and Resubmit* at *Econometric Reviews*) \ 
  [arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/LPM_CMW.pdf) &nbsp; [code & replication material](https://kaichengchen.github.io/lpm_simulation_post.rar)
  <details>
 <summary>Abstract</summary>
