@@ -28,9 +28,8 @@ In models with endogenous treatments, researchers often leverage the conditional
 
 
 ***"Another Look at the Linear Probability Model and Nonlinear Index Models"***\
- with **Robert S. Martin** and **Jeffrey M. Wooldridge** (Revise & Resubmit at *Econometric Reviews*)\
- 
- [arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/LPM_CMW.pdf) &nbsp; [code & replication material](https://kaichengchen.github.io/lpm_simulation_post.rar)
+ with **Robert S. Martin** and **Jeffrey M. Wooldridge** (Revise & Resubmit at *Econometric Reviews*) \ 
+[arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/LPM_CMW.pdf) &nbsp; [code & replication material](https://kaichengchen.github.io/lpm_simulation_post.rar)
  <details>
 <summary>Abstract</summary>
 We reassess the use of linear models for binary responses, focusing on average partial effects (APEs). We confirm that under certain conditions, linear projection parameters correspond to APEs even when the true model is nonlinear. Simulations demonstrate a large fraction of fitted values in [0, 1] is neither necessary nor sufficient for OLS to approximate the APEs. To reduce bias, excluding observations with fitted values outside [0, 1] has been proposed. We show that iteratively trimming the sample is equivalent to nonlinear least squares estimation of a piece-wise linear (ramp) model, for which we establish consistency and asymptotic normality results.
