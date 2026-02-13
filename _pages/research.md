@@ -12,10 +12,10 @@ redirect_from:
 
 ***"Cross-Fitting-Free Debiased Machine Learning with Multiway Dependence"***  \
 with **Harold D. Chiang** \
-[draft coming soon](https://kaichengchen.github.io)
+[arXiv](https://arxiv.org/abs/2602.11333)
 <details>
 <summary>Abstract</summary>
-This paper develops an asymptotic theory for two-step debiased machine learning (DML) estimators in GMM models with multiway clustered dependence, without relying on cross-fitting. Although cross-fitting is widely used to control overfitting bias and relax empirical process conditions, it can be statistically and computationally costly when first-stage learners are complex and the effective sample size is determined by the number of independent clusters. We show that, by combining orthogonal moment conditions with a localisation-based empirical process argument, valid inference can be conducted without sample splitting for an arbitrary number of clustering dimensions. Our results establish asymptotic linearity and normality of the resulting DML–GMM estimators and deliver inference procedures that remain valid under separately exchangeable sampling. A key technical contribution is the derivation of new global and local maximal inequalities for general function classes for separate exchangeable arrays.
+This paper develops an asymptotic theory for two-step debiased machine learning (DML) estimators in generalised method of moments (GMM) models with general multiway clustered dependence, without relying on cross-fitting. While cross-fitting is commonly employed, it can be statistically inefficient and computationally burdensome when first-stage learners are complex and the effective sample size is governed by the number of independent clusters. We show that valid inference can be achieved without sample splitting by combining Neyman-orthogonal moment conditions with a localisation-based empirical process approach, allowing for an arbitrary number of clustering dimensions. The resulting DML-GMM estimators are shown to be asymptotically linear and asymptotically normal under multiway clustered dependence. A central technical contribution of the paper is the derivation of novel global and local maximal inequalities for general classes of functions of sums of separately exchangeable arrays, which underpin our theoretical arguments and are of independent interest.
 </details>
 
 
