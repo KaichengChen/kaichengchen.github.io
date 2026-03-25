@@ -29,7 +29,7 @@ Panel data allows for the modeling of unobserved heterogeneity, significantly ra
 
 ***"Identification of Average Responses with Endogenous Controls"***\
 with **Kyoo il Kim** \
-[arXiv](https://arxiv.org/abs/2401.14395)
+[arXiv](https://arxiv.org/abs/2401.14395) &nbsp; [code & replication](http://kaichengchen.github.io/endo_controls_replication.zip)
  <details>
 <summary>Abstract</summary>
 Control variables are routinely treated as exogenous, yet in many empirical settings they are themselves endogenous. This creates a dilemma: omitting controls may leave the treatment endogenous, while including them may contaminate identification. The problem is not resolved by instrumental variables when they are only conditionally valid. We show that average responses to the treatment remain identified under a rank condition called measurable separability, which accommodates endogenous controls. For parametric models, our approach amounts to estimating a nonparametric model that nests the parametric specification. For nonparametric models, our results imply that endogenous controls are generally innocuous under standard identification conditions, except in the presence of "bad controls". We further propose a test for endogenous controls. Simulation results and an empirical application demonstrate this prevalent issue and provide practical implications of our methods.
