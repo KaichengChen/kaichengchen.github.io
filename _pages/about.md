@@ -19,7 +19,7 @@ Please feel free to reach me at `chenkaicheng@sufe.edu.cn`.
 ## News 📢 
 
 <span style="font-size:0.7em;"> 💼 06/2026 Upcoming presentation at 2026 Asia Meeting of Econometrics Society (AMES) @ HKU Business School, Hong Kong.</span> <br>
-<span style="font-size:0.7em;"> 💼 06/2026 Upcoming seminar at the Institute for Economic and Social Research (IESR) @ Jinan University
+<span style="font-size:0.7em;"> 💼 06/2026 Upcoming seminar at the Institute for Economic and Social Research (IESR) @ Jinan University.</span> <br>
 <span style="font-size:0.7em;"> 💼 08/2025 Presentation at 2025 World Congress of the Econometric Society (ESWC) @ Coex, Seoul.</span> <br>
 <span style="font-size:0.7em;"> 🎓 05/2025 Conferral of my PhD degree in Economics.</span> <br>
 <span style="font-size:0.7em;"> 💼 03/2025 Presentation at 2025 Chinese Economists Society (CES) North America Annual Conference @ University of Michigan.</span> <br>
