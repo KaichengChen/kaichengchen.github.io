@@ -12,6 +12,7 @@ redirect_from:
 
 ***"Cross-Fitting-Free Debiased Machine Learning with Multiway Dependence"***  \
 with **Harold D. Chiang** \
+first circulation - **2026** - arXiv:2602.11333 \
 [arXiv](https://arxiv.org/abs/2602.11333)
 <details>
 <summary>Abstract</summary>
@@ -21,6 +22,7 @@ This paper develops an asymptotic theory for two-step debiased machine learning 
 
 ***"Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"***  \
 Best Student Paper Award at *2024 Midwest Econometrics Group Meeting* \
+first circulation - **2025** - arXiv:2504.18772 \
 [arXiv](https://arxiv.org/abs/2504.18772) &nbsp; [latest version](https://kaichengchen.github.io/TW_DML_LASSO_CRE.pdf) &nbsp; [code & replication](http://kaichengchen.github.io/twlasso_paneldml_replication.zip)
 <details>
 <summary>Abstract</summary>
@@ -29,6 +31,7 @@ Panel data allows for the modeling of unobserved heterogeneity, significantly ra
 
 ***"Identification of Average Responses with Endogenous Controls"***\
 with **Kyoo il Kim** \
+first circulation - **2024** - arXiv:2401.14395 \
 [arXiv](https://arxiv.org/abs/2401.14395) &nbsp; [code & replication](http://kaichengchen.github.io/endo_controls_replication.zip)
  <details>
 <summary>Abstract</summary>
@@ -39,6 +42,7 @@ Control variables are routinely treated as exogenous, yet in many empirical sett
 
 ***"Another Look at the Linear Probability Model and Nonlinear Index Models"***\
  with **Robert S. Martin** and **Jeffrey M. Wooldridge** (Revise & Resubmit at *Econometric Reviews*) \
+ first circulation - **2023** - arXiv:2308.15338 \
 [arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/LPM_CMW.pdf) &nbsp; [code & replication](https://kaichengchen.github.io/lpm_simulation_post.rar)
  <details>
 <summary>Abstract</summary>
@@ -49,6 +53,7 @@ We reassess the use of linear models for binary responses, focusing on average p
 ## Publication
 ***"Fixed-b Asymptotics for Panel Models with Two-Way Clustering"***\
 with **Timothy J. Vogelsang** (*Journal of Econometrics*, 2024, 244(1): 105831) \
+first circulation - **2023** - arXiv:2309.08707 \
 [arXiv](https://arxiv.org/abs/2309.08707) &nbsp; [published version](https://www.sciencedirect.com/science/article/abs/pii/S0304407624001763)\
 STATA command: ``xtregtfb``. Installation: type ``net from https://kaichengchen.github.io/statafile/`` in STATA 
 <details>
