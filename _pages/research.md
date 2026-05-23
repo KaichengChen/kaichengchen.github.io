@@ -10,13 +10,23 @@ redirect_from:
 
 ## Working Papers
 
+***"Fixed-smoothing Uniform Inference for Quantile Regression"***  \
+with **Antonio F. Galvao, Seunghwa Rho, Timothy J. Vogelsang, Jungmo Yoon** \
+draft coming soon \
+<details>
+<summary>Abstract</summary>
+This paper considers fixed-smoothing (fixed-b, fixed-K) inference methods for quantile regression, robust to the presence of heteroskedasticity and autocorrelation (HAR). Importantly, our approach is uniform in quantile levels and captures the covariance structure across quantiles. Unlike data that is independent identically distributed (i.i.d.), or follows a martingale difference sequence (MDS), data with weak dependence results in asymptotic distributions of test statistics that are not pivotal. To accommodate these non-pivotal limits we use two approaches. The first directly simulates the limiting distributions by discretizing the covariance matrix. The second is a stacked-moment approach that discretizes via a vector of moment conditions. Our approach enables researchers to construct (i) uniform confidence bands for quantile effects across the outcome distribution, (ii) Wald and Sup-t tests for joint hypotheses across quantiles, and (iii) tests for shape restrictions, such as monotonicity and equality of quantile effects. Together, these tools provide a unified framework for assessing heterogeneity in quantile effects. To demonstrate the effectiveness of the proposed methods, we consider a predictive quantile regression of economic state variables on monthly S\&P 500 returns, which reveals substantial heterogeneity across the outcome distribution and highlights the importance of robust inference in the presence of dependent errors.
+</details>
+
+
+
 ***"Cross-Fitting-Free Debiased Machine Learning with Multiway Dependence"***  \
 with **Harold D. Chiang** \
 first circulation - **2026** - arXiv:2602.11333 \
 [arXiv](https://arxiv.org/abs/2602.11333)
 <details>
 <summary>Abstract</summary>
-TThis paper develops an asymptotic theory for two-step debiased machine learning (DML) estimators in generalised method of moments (GMM) models with general multiway clustered dependence, without relying on cross-fitting. While cross-fitting is commonly employed, it can be statistically inefficient and computationally burdensome when first-stage learners are complex and the effective sample size is governed by the number of independent clusters. We show that valid inference can be achieved without sample splitting by combining Neyman-orthogonal moment conditions with a localisation-based empirical process approach, allowing for an arbitrary number of clustering dimensions. The resulting debiased GMM estimators are shown to be asymptotically linear and asymptotically normal under multiway clustered dependence. A central technical contribution of the paper is the derivation of novel global and local maximal inequalities for general classes of functions of sums of separately exchangeable arrays, which underpin our theoretical arguments and are of independent interest.
+This paper develops an asymptotic theory for two-step debiased machine learning (DML) estimators in generalised method of moments (GMM) models with general multiway clustered dependence, without relying on cross-fitting. While cross-fitting is commonly employed, it can be statistically inefficient and computationally burdensome when first-stage learners are complex and the effective sample size is governed by the number of independent clusters. We show that valid inference can be achieved without sample splitting by combining Neyman-orthogonal moment conditions with a localisation-based empirical process approach, allowing for an arbitrary number of clustering dimensions. The resulting debiased GMM estimators are shown to be asymptotically linear and asymptotically normal under multiway clustered dependence. A central technical contribution of the paper is the derivation of novel global and local maximal inequalities for general classes of functions of sums of separately exchangeable arrays, which underpin our theoretical arguments and are of independent interest.
 </details>
 
 
