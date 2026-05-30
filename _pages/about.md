@@ -18,7 +18,7 @@ Please feel free to reach me at `chenkaicheng@sufe.edu.cn`.
 
 ## News 📢 
 
-<span style="font-size:0.7em;"> 💼 06/2026 Upcoming seminar talk in the College of Economics and Finance at Hanyang University, Seoul.</span> <br>
+<span style="font-size:0.7em;"> 💼 06/2026 Upcoming seminar talk in the College of Economics and Finance @ Hanyang University, Seoul.</span> <br>
 <span style="font-size:0.7em;"> 💼 06/2026 Upcoming presentation at 2026 Asia Meeting of Econometrics Society (AMES) @ HKU Business School, Hong Kong.</span> <br>
 <span style="font-size:0.7em;"> 💼 06/2026 Upcoming seminar talk in the Institute for Economic and Social Research (IESR) @ Jinan University.</span> <br>
 <span style="font-size:0.7em;"> 💼 05/2026 Workshop talk in the School of Economics and Management @ Nanjing Agricultural University.</span> <br>
