@@ -18,6 +18,7 @@ Please feel free to reach me at `chenkaicheng@sufe.edu.cn`.
 
 ## News 📢 
 
+<span style="font-size:0.7em;"> 💼 12/2026 Upcoming talk in the School of Economics and Management, Beihang University, Beijing.</span> <br>
 <span style="font-size:0.7em;"> 💼 10/2026 Upcoming talk in the Department of Economics @ University of Wisconsin, Madison.</span> <br>
 <span style="font-size:0.7em;"> 💼 09/2026 Upcoming poster presentation in NBER-NSF Time Series @ University of Bologna, Bologna.</span> <br>
 <span style="font-size:0.7em;"> 💼 06/2026 Upcoming seminar talk in the College of Economics and Finance @ Hanyang University, Seoul. [slides](https://kaichengchen.github.io/No_Cross_Fitting_Slides.pdf) </span> <br>
