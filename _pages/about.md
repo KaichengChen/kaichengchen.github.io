@@ -10,7 +10,7 @@ redirect_from:
 
 ## Welcome to Kaicheng's home page!
 
-I am an Assistant Professor in the School of Economics at Shanghai University of Finance and Economics (SUFE). I obtained my PhD in Economics from Michigan State University. My research interest lies in econometrics broadly, with a focus on ***high-dimensional methods for panel and time series data***, ***robust inference for panel models***, ***fixed-smoothing inference***, and ***discrete choice models***. 
+I am an Assistant Professor in the School of Economics at Shanghai University of Finance and Economics (SUFE). I obtained my PhD in Economics from Michigan State University. My research interest lies in econometrics broadly, with a focus on ***high-dimensional methods***, ***fixed-smoothing inference***, and ***panel data models***. 
 
 *<span style="color:grey">I also love national parks ⛺ and board games ♜.</span>*
 
