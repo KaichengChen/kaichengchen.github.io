@@ -28,13 +28,7 @@ python -m pip install \
 
 This installs the package from the `pyfile/fullsample_gmm_dml` subdirectory
 of the repository. It does not create a local copy of the examples, data, or
-tests. After a release tag such as `v0.1.0` has been created, users can pin
-the installation to that version:
-
-```sh
-python -m pip install \
-  "fullsample-gmm-dml @ git+https://github.com/kaichengchen/kaichengchen.github.io.git@v0.1.0#subdirectory=pyfile/fullsample_gmm_dml"
-```
+tests. 
 
 ### Option 2: clone the repository
 
