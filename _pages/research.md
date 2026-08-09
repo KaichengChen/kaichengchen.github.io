@@ -33,7 +33,7 @@ This paper develops an asymptotic theory for two-step debiased machine learning 
 ***"Inference in High-Dimensional Panel Models: Two-Way Dependence and Unobserved Heterogeneity"***  \
 Best Student Paper Award at *2024 Midwest Econometrics Group Meeting* \
 first circulation - **2025** - arXiv:2504.18772 \
-[arXiv](https://arxiv.org/abs/2504.18772) &nbsp; [latest version](https://kaichengchen.github.io/TW_DML_LASSO_CRE.pdf) &nbsp; [code & replication](http://kaichengchen.github.io/twlasso_paneldml_replication.zip)
+[arXiv](https://arxiv.org/abs/2504.18772) &nbsp; [latest version](https://kaichengchen.github.io/papers/TW_DML_LASSO_CRE.pdf) &nbsp; [code & replication](http://kaichengchen.github.io/code-replication/twlasso_paneldml_replication.zip)
 <details>
 <summary>Abstract</summary>
 Panel data allows for the modeling of unobserved heterogeneity, significantly raising the number of nuisance parameters and making high dimensionality a practical issue. Meanwhile, temporal and cross-sectional dependence in panel data further complicates high-dimensional estimation and inference. This paper proposes a toolkit for high-dimensional panel models with large cross-sectional and time sample sizes. To reduce the dimensionality, I propose a variant of LASSO for two-way clustered panels. While being consistent, the convergence rate of LASSO is slow due to the cluster dependence, rendering inference challenging in general. Nevertheless, asymptotic normality can be established in a semiparametric moment-restriction model by leveraging a clustered-panel cross-fitting approach and, as a special case, in a partial linear model using the full sample. In an exercise of estimating multiplier using panel data, I demonstrate how high dimensionality could be hidden and the proposed toolkit enables flexible modeling and robust inference.
@@ -42,7 +42,7 @@ Panel data allows for the modeling of unobserved heterogeneity, significantly ra
 ***"Identification of Average Responses with Endogenous Controls"***\
 with **Kyoo il Kim** \
 first circulation - **2024** - arXiv:2401.14395 \
-[arXiv](https://arxiv.org/abs/2401.14395) &nbsp; [code & replication](http://kaichengchen.github.io/endo_controls_replication.zip)
+[arXiv](https://arxiv.org/abs/2401.14395) &nbsp; [code & replication](http://kaichengchen.github.io/code-replication/endo_controls_replication.zip)
  <details>
 <summary>Abstract</summary>
 Control variables are routinely treated as exogenous, yet in many empirical settings they are themselves endogenous. This creates a dilemma: omitting controls may leave the treatment endogenous, while including them may contaminate identification. The problem is not resolved by instrumental variables when they are only conditionally valid. We show that average responses to the treatment remain identified under a rank condition called measurable separability, which accommodates endogenous controls. For parametric models, our approach amounts to estimating a nonparametric model that nests the parametric specification. For nonparametric models, our results imply that endogenous controls are generally innocuous under standard identification conditions, except in the presence of "bad controls". We further propose a test for endogenous controls. Simulation results and an empirical application demonstrate this prevalent issue and provide practical implications of our methods.
@@ -53,7 +53,7 @@ Control variables are routinely treated as exogenous, yet in many empirical sett
 ***"Another Look at the Linear Probability Model and Nonlinear Index Models"***\
  with **Robert S. Martin** and **Jeffrey M. Wooldridge** (Revise & Resubmit at *Econometric Reviews*) \
  first circulation - **2023** - arXiv:2308.15338 \
-[arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/LPM_CMW.pdf) &nbsp; [code & replication](https://kaichengchen.github.io/lpm_simulation_post.rar)
+[arXiv](https://arxiv.org/abs/2308.15338) &nbsp; [latest version](https://kaichengchen.github.io/papers/LPM_CMW.pdf) &nbsp; [code & replication](https://kaichengchen.github.io/code-replication/lpm_simulation_post.rar)
  <details>
 <summary>Abstract</summary>
 We reassess the linear probability model (LPM) for binary responses from the perspective of average partial effects (APEs). Under certain conditions, the LPM recovers APEs even when the true response probability is nonlinear. Outside these scenarios, we demonstrate in simulations that having a large fraction of fitted values in [0, 1] is neither necessary nor sufficient for OLS to approximate the APEs well, which contradicts the common rationale. We further investigate and refine an ad hoc trimming procedure to reduce bias for LPM, and establish its statistical properties by relating it to a numerically equivalent nonlinear least squares estimator.
