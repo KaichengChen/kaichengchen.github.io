@@ -55,8 +55,7 @@ pandas, SciPy, and scikit-learn.
 
 The downloaded folder and Python import package are named
 `fullsample_gmm_dml`. The distribution installed by pip is named
-`fullsample-gmm-dml` because Python distribution names conventionally use
-hyphens:
+`fullsample-gmm-dml`.:
 
 ```python
 from fullsample_gmm_dml import fit_gmm
