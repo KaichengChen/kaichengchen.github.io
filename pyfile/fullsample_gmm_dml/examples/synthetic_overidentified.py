@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Overidentified full-sample GMM on the project's synthetic data."""
 
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -20,12 +21,12 @@ from fullsample_gmm_dml import (
 )
 
 
-DATA_PATH = Path(__file__).resolve().parent / "data" / "synthetic_gmm.csv"
+DATA_PATH = Path(__file__).resolve().parent / "data" / "synthetic_gmm.csv" 
 FEATURES = [f"x{index}" for index in range(1, 6)]
 CLUSTER_COLS = ["row_id", "col_id"]
 
 # Change only this line to switch the nuisance-tuning scheme.
-CV_MODE = "oneway"  # available values: "oneway", "multiway"
+CV_MODE = "multiway"  # available values: "oneway", "multiway"
 MULTIWAY_FOLDS_PER_DIMENSION = 3
 
 
@@ -61,32 +62,32 @@ def tuned_ridge(
     )
 
 
-# The tuning parameters demonstrate that each nuisance learner can have its
+# The tuning parameters can be set differently foreach nuisance learner
 # own tuning configuration.
 def main(cv_mode: str = CV_MODE) -> None:
     data = pd.read_csv(DATA_PATH)
     tuning_groups = None if cv_mode == "oneway" else CLUSTER_COLS
     specs = {
         "ell": NuisanceSpec(
-            estimator=tuned_ridge([0.1, 1.0, 10.0], 5, cv_mode),
+            estimator=tuned_ridge(np.logspace(-3, 3, 20), 5, cv_mode),
             target="y",
             features=FEATURES,
             groups=tuning_groups,
         ),
         "r": NuisanceSpec(
-            estimator=tuned_ridge([0.01, 0.1, 1.0], 4, cv_mode),
+            estimator=tuned_ridge(np.logspace(-3, 3, 20), 5, cv_mode),
             target="d",
             features=FEATURES,
             groups=tuning_groups,
         ),
         "m1": NuisanceSpec(
-            estimator=tuned_ridge([0.1, 1.0, 5.0], 3, cv_mode),
+            estimator=tuned_ridge(np.logspace(-3, 3, 20), 5, cv_mode),
             target="z1",
             features=FEATURES,
             groups=tuning_groups,
         ),
         "m2": NuisanceSpec(
-            estimator=tuned_ridge([0.5, 2.0, 10.0], 6, cv_mode),
+            estimator=tuned_ridge(np.logspace(-3, 3, 20), 5, cv_mode),
             target="z2",
             features=FEATURES,
             groups=tuning_groups,
