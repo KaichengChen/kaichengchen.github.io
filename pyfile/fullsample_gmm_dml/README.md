@@ -103,9 +103,9 @@ inverts the preliminary clustered moment matrix and minimizes the feasible
 second-step criterion. Set `n_steps=1` to retain the identity-weighted
 estimate. An optional analytic Jacobian must return the $q \times p$ matrix
 
-\[
+$$
 J(\theta)=-\partial_\theta E[\psi(X,\theta,\eta)].
-\]
+$$
 
 Otherwise, the package uses central numerical derivatives. The result stores
 the coefficient, standard error, 95% confidence interval, covariance,
@@ -226,9 +226,9 @@ should account for the dependence structure.
 Let $\bar M$ be the number of unit observations, let $N_k$ be the number
 of clusters in dimension $k$, and set
 
-\[
+$$
 n_{\mathrm{eff}}=\min_{1\le k\le K}N_k.
-\]
+$$
 
 The implementation first sums unit scores inside each observed full
 $K$-way cell. For `PSD`, it sums the outer products of the cluster totals
@@ -281,11 +281,11 @@ the complete sample in either mode.
 
 Its two-component orthogonal score is
 
-\[
+$$
 \psi_i(\theta)=
 \begin{pmatrix}\tilde Z_{1i}\\\tilde Z_{2i}\end{pmatrix}
 (\tilde Y_i-\theta\tilde D_i),
-\]
+$$
 
 so the scalar coefficient is overidentified. The example prints the
 identity-weighted estimate, feasible two-step estimate, `PSD` standard error,
