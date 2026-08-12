@@ -1,0 +1,120 @@
+---
+title: "Synthetic overidentified full-sample DML-GMM"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Synthetic overidentified full-sample DML-GMM}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This example uses the canonical heterogeneous-cell data accompanying the
+paper: 3,521 observations in all 1,400 row-column cells, with cell sizes from
+one to four. There are two instruments and one target parameter, so the model
+is overidentified. Four nuisance regressions are tuned and then refitted on
+the complete sample. The tuning folds below choose hyperparameters; they are
+not DML cross-fitting.
+
+The full example is installed at
+`system.file("examples", "synthetic_overidentified.R", package = "fullsampleDML")`.
+The chunks are not evaluated while building the vignette because the four
+tuning searches are intentionally more expensive than routine package checks.
+
+```{r, eval=FALSE}
+library(fullsampleDML)
+library(mlr3)
+library(mlr3tuning)
+library(paradox)
+
+data_path <- system.file("extdata", "synthetic_gmm.csv", package = "fullsampleDML")
+data <- read.csv(data_path)
+x_cols <- paste0("x", 1:5)
+cluster_cols <- c("row_id", "col_id")
+cv_mode <- "oneway" # change to "multiway" for strict tuning
+```
+
+The one-way mode automatically uses `col_id`, the dimension with 35 rather
+than 40 clusters. Strict multiway mode constructs 3-by-3 Cartesian folds; no
+training and validation observation shares either a row or a column cluster.
+
+```{r, eval=FALSE}
+make_learner <- function() {
+  auto_tuner(
+    tuner = tnr("grid_search", resolution = 10),
+    learner = lrn("regr.glmnet", alpha = 0),
+    resampling = rsmp("cv", folds = 5),
+    measure = msr("regr.mse"),
+    term_evals = 10,
+    search_space = ps(
+      lambda = p_dbl(log(1e-3), log(1e3), trafo = exp)
+    )
+  )
+}
+
+features <- function(frame) {
+  stats::model.matrix(
+    ~ (x1 + x2 + x3 + x4 + x5)^2 +
+      I(x1^2) + I(x2^2) + I(x3^2) + I(x4^2) + I(x5^2) - 1,
+    data = frame
+  )
+}
+
+groups <- if (cv_mode == "multiway") {
+  multiway_group_kfold(cluster_cols, 3, shuffle = TRUE, random_state = 2026)
+} else {
+  NULL
+}
+
+specs <- list(
+  ell = nuisance_spec(make_learner(), "y", features, groups),
+  r = nuisance_spec(make_learner(), "d", features, groups),
+  m1 = nuisance_spec(make_learner(), "z1", features, groups),
+  m2 = nuisance_spec(make_learner(), "z2", features, groups)
+)
+```
+
+The two-component orthogonal score is
+
+\[
+\psi_i(\theta)=
+\begin{pmatrix}\widetilde Z_{1i}\\\widetilde Z_{2i}\end{pmatrix}
+(\widetilde Y_i-\theta\widetilde D_i).
+\]
+
+```{r, eval=FALSE}
+score <- function(data, theta, nuisance) {
+  predictions <- nuisance$predictions
+  y_residual <- data$y - predictions$ell
+  d_residual <- data$d - predictions$r
+  z_residual <- cbind(
+    data$z1 - predictions$m1,
+    data$z2 - predictions$m2
+  )
+  z_residual * (y_residual - theta[1] * d_residual)
+}
+
+jacobian <- function(data, theta, nuisance) {
+  predictions <- nuisance$predictions
+  d_residual <- data$d - predictions$r
+  z_residual <- cbind(
+    data$z1 - predictions$m1,
+    data$z2 - predictions$m2
+  )
+  matrix(colMeans(z_residual * d_residual), ncol = 1)
+}
+
+result <- fit_gmm(
+  data, score, theta_start = 0, cluster_cols = cluster_cols,
+  nuisance_fit = mlr3_nuisance_fit(specs), jacobian = jacobian,
+  weight_type = "PSD", covariance_type = "PSD"
+)
+
+summary(result)
+result$n_observations # 3521
+result$n_cells        # 1400
+result$n_eff          # 35
+result$nuisance$group_columns$ell
+```
+
+Software compatibility alone does not establish statistical validity. Users
+remain responsible for the rate, complexity, orthogonality, and dependence
+conditions in the accompanying paper.

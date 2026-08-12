@@ -1,0 +1,35 @@
+Package: fullsampleDML
+Type: Package
+Title: Cross-Fitting-Free Debiased Machine Learning with Multiway Dependence
+Version: 0.1.0
+Authors@R: c(
+    person("Kaicheng", "Chen", email = "chenkaicheng@sufe.edu.cn",
+           role = c("aut", "cre")),
+    person("Harold D.", "Chiang", email = "hdchiang@wisc.edu",
+           role = "aut")
+  )
+Description: Implements full-sample debiased generalized method of moments
+    estimation with user-supplied orthogonal scores, feasible one- or two-step
+    weighting, and positive-semidefinite or inclusion-exclusion covariance
+    estimators for an arbitrary number of clustering dimensions. Nuisance
+    functions are fitted on the complete sample without DML cross-fitting.
+    Optional helpers integrate cluster-aware tuning through 'mlr3'. The methods
+    accompany Chen and Chiang (2026) <doi:10.48550/arXiv.2602.11333>.
+License: MIT
+URL: https://github.com/kaichengchen/fullsampleDML-r,
+    https://arxiv.org/abs/2602.11333
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Suggests:
+    glmnet,
+    knitr,
+    mlr3,
+    mlr3learners,
+    mlr3tuning,
+    paradox,
+    rmarkdown,
+    rpart,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
