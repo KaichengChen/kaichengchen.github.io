@@ -18,7 +18,7 @@ Please feel free to reach me at `chenkaicheng@sufe.edu.cn`.
 
 ## News 📢 
 
-<span style="font-size:0.7em;"> 💼 12/2026 Upcoming talk in the School of Economics and Management, Beihang University, Beijing.</span> <br>
+<!-- <span style="font-size:0.7em;"> 💼 12/2026 Upcoming talk in the School of Economics and Management, Beihang University, Beijing.</span> <br> -->
 <span style="font-size:0.7em;"> 💼 09/2026 Upcoming poster session in NBER-NSF Time Series @ University of Bologna, Bologna.</span> <br>
 <span style="font-size:0.7em;"> 🍀 08/2026 Received the Young Scientists Fund (Category C) of the National Natural Science Foundation of China (NSFC).</span> <br>
 <span style="font-size:0.7em;"> 💼 06/2026 Seminar talk in the College of Economics and Finance @ Hanyang University, Seoul. [slides](https://kaichengchen.github.io/slides/No_Cross_Fitting_Slides.pdf) </span> <br>
