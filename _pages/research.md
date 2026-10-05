@@ -42,14 +42,13 @@ first circulation - **2025** - arXiv:2504.18772 \
 Panel data allows for the modeling of unobserved heterogeneity, significantly raising the number of nuisance parameters and making high dimensionality a practical issue. Meanwhile, temporal and cross-sectional dependence in panel data further complicates high-dimensional estimation and inference. This paper proposes a toolkit for high-dimensional panel models with large cross-sectional and time sample sizes. To reduce the dimensionality, I propose a variant of LASSO for two-way clustered panels. While being consistent, the convergence rate of LASSO is slow due to the cluster dependence, rendering inference challenging in general. Nevertheless, asymptotic normality can be established in a semiparametric moment-restriction model by leveraging a clustered-panel cross-fitting approach and, as a special case, in a partial linear model using the full sample. In an exercise of estimating multiplier using panel data, I demonstrate how high dimensionality could be hidden and the proposed toolkit enables flexible modeling and robust inference.
 </details>
 
-***"Identification of Average Responses with Endogenous Controls"***\
+***"Endogenous Control Bias and Correction with Nonparametric Methods"***\
 with **Kyoo il Kim** \
 first circulation - **2024** - arXiv:2401.14395 \
 [arXiv](https://arxiv.org/abs/2401.14395) &nbsp; [code & replication](http://kaichengchen.github.io/code-replication/endo_controls_replication.zip)
  <details>
 <summary>Abstract</summary>
-Control variables are routinely treated as exogenous, yet in many empirical settings they are themselves endogenous. This creates a dilemma: omitting controls may leave the treatment endogenous, while including them may contaminate identification. The problem is not resolved by instrumental variables when they are only conditionally valid. We show that average responses to the treatment remain identified under a rank condition called measurable separability, which accommodates endogenous controls. For parametric models, our approach amounts to estimating a nonparametric model that nests the parametric specification. For nonparametric models, our results imply that endogenous controls are generally innocuous under standard identification conditions, except in the presence of "bad controls". We further propose a test for endogenous controls. Simulation results and an empirical application demonstrate this prevalent issue and provide practical implications of our methods.
- </details>
+Controls are often needed to make a treatment or instrument conditionally valid, yet they may be related to unobserved outcome determinants. We show that restricted parametric adjustment can fail to recover the structural average response even when the structural model is correctly specified. Under conditional independence and sufficient conditional treatment variation, flexible conditional mean methods identify the structural average response in a nonseparable model, while a control function extension accommodates endogenous treatments with conditionally valid instruments. We develop a specification test to guide the choice between restricted and flexible functional forms. Simulations and a China shock application illustrate the methods.
  <!-- [latest version](https://kaichengchen.github.io/endogenous_control.pdf) -->
 
 
