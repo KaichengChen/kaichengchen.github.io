@@ -49,7 +49,7 @@ first circulation - **2024** - arXiv:2401.14395 \
  <details>
 <summary>Abstract</summary>
 Controls are often needed to make a treatment or instrument conditionally valid, yet they may be related to unobserved outcome determinants. We show that restricted parametric adjustment can fail to recover the structural average response even when the structural model is correctly specified. Under conditional independence and sufficient conditional treatment variation, flexible conditional mean methods identify the structural average response in a nonseparable model, while a control function extension accommodates endogenous treatments with conditionally valid instruments. We develop a specification test to guide the choice between restricted and flexible functional forms. Simulations and a China shock application illustrate the methods.
- <!-- [latest version](https://kaichengchen.github.io/endogenous_control.pdf) -->
+</details>
 
 
 ***"Another Look at the Linear Probability Model and Nonlinear Index Models"***\
