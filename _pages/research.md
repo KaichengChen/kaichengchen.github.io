@@ -10,15 +10,23 @@ redirect_from:
 
 ## Working Papers
 
+***"Linear Regression with Common Unobserved Heterogeneity"*** \
+with **Hugo Freeman** \
+first circulation -**2026**- arXiv:2610.25589 \
+[arXiv](https://arxiv.org/html/2610.25589v1)
+<details>
+<summary>Abstract</summary>
+We study inference on common slope parameters in linear panel models with two-way unobserved heterogeneity. In linear regression, bias arises from unobserved heterogeneity that is shared between the residual and the covariates. Our common unobserved heterogeneity (CUH) estimator targets this common variation directly:  it searches over functionals of the residualised outcome for variation that also  resides in the covariates, and seeks to further project out only bias-inducing variation. This makes the estimator less sensitive to weak outcome factors while avoiding the complete removal of exogenous variation in covariates that is unrelated to the confounding heterogeneity. We develop a weak-factor theory based on a singular-value strength index and establish root-NT asymptotic normality of the cross-fitted CUH estimator. Under homoskedastic errors, its asymptotic variance is no larger than that of a common correlated effects factor estimator. Simulations and empirical applications illustrate the resulting bias--variance trade-off and the gains from selectively removing common variation.
+</details>
+
+
 ***"Fixed-smoothing Uniform Inference for Quantile Regression"***  \
 with **Antonio F. Galvao, Seunghwa Rho, Timothy J. Vogelsang, Jungmo Yoon** \
 first circulation - **2026** - arXiv:2609.05883 \
-[arXiv](https://arxiv.org/abs/2609.05883)
-
+[arXiv](https://arxiv.org/abs/2609.05883) 
 <details>
 <summary>Abstract</summary>
-  
-This paper develops fixed-smoothing (fixed-b, fixed-K) inference methods for time-series quantile regression that are robust to heteroskedasticity and autocorrelation. Our approach is uniformly valid over quantile levels and accounts for dependence both over time and across quantiles. It enables the construction of uniform confidence bands, Wald, and Sup-t tests for joint hypotheses, and tests of shape restrictions, providing a unified framework for assessing heterogeneity in quantile effects. A key challenge is that, under weak dependence, uniform inference for quantile regression processes is generally non-pivotal because the limiting distributions depend on the long-run covariance structure across quantiles. To address this issue, we develop two complementary approaches. The uniform-in-τ method estimates the covariance structure and simulates the non-pivotal limiting distribution. For certain tests involving a finite collection of quantile levels, the stack-Wald method delivers pivotal fixed-smoothing inference. We establish the asymptotic validity of both approaches. Simulation results show that the proposed methods substantially improve size control relative to existing HAC-based procedures while maintaining good power. An application to predictive quantile regressions for stock returns reveals substantial heterogeneity in predictive effects across both quantiles and forecast horizons.
+This paper develops fixed-smoothing inference methods for time-series quantile regression that are robust to heteroskedasticity and autocorrelation. Our approach is uniformly valid over quantile levels and accounts for dependence over time and across quantiles. It enables uniform confidence bands, Wald and Sup-t tests for joint hypotheses, and tests of shape restrictions, providing a unified framework for assessing heterogeneity in quantile effects. Under weak dependence, uniform inference for quantile regression processes is non-pivotal because the limiting distributions depend on the long-run covariance structure across quantiles. To address this issue, we develop two complementary approaches. The uniform-in-tau method estimates this structure and simulates the non-pivotal limiting distribution. For certain tests involving finitely many quantiles, the stack-Wald method delivers pivotal fixed-smoothing inference. We establish the asymptotic validity of both approaches. Simulations show improved size control over existing HAC-based procedures while maintaining good power. An application to stock-return prediction reveals substantial heterogeneity in predictive effects.
 </details>
 
 
@@ -26,7 +34,7 @@ This paper develops fixed-smoothing (fixed-b, fixed-K) inference methods for tim
 ***"Cross-Fitting-Free Debiased Machine Learning with Multiway Dependence"***  \
 with **Harold D. Chiang** \
 first circulation - **2026** - arXiv:2602.11333 \
-[arXiv](https://arxiv.org/abs/2602.11333)
+[arXiv](https://arxiv.org/abs/2602.11333) &nbsp; [R package](https://github.com/KaichengChen/fullsampleDML-r) &nbsp; [Python package](https://github.com/KaichengChen/fullsampleDML-python)
 <details>
 <summary>Abstract</summary>
 This paper develops an asymptotic theory for two-step debiased machine learning (DML) estimators in generalised method of moments (GMM) models with general multiway clustered dependence, without relying on cross-fitting. While cross-fitting is commonly employed, it can be statistically inefficient and computationally burdensome when first-stage learners are complex and the effective sample size is governed by the number of independent clusters. We show that valid inference can be achieved without sample splitting by combining Neyman-orthogonal moment conditions with a localisation-based empirical process approach, allowing for an arbitrary number of clustering dimensions. The resulting debiased GMM estimators are shown to be asymptotically linear and asymptotically normal under multiway clustered dependence. A central technical contribution of the paper is the derivation of novel global and local maximal inequalities for empirical processes indexed by general classes of functions for separately exchangeable arrays, which underpin our theoretical arguments and are of independent interest.
