@@ -23,7 +23,7 @@ We study inference on common slope parameters in linear panel models with two-wa
 ***"Fixed-smoothing Uniform Inference for Quantile Regression"***  \
 with **Antonio F. Galvao, Seunghwa Rho, Timothy J. Vogelsang, Jungmo Yoon** \
 first circulation - **2026** - arXiv:2609.05883 \
-[arXiv](https://arxiv.org/abs/2609.05883) 
+[arXiv](https://arxiv.org/abs/2609.05883) &nbsp; [R package](https://github.com/seunghwaRho/QRfs)
 <details>
 <summary>Abstract</summary>
 This paper develops fixed-smoothing inference methods for time-series quantile regression that are robust to heteroskedasticity and autocorrelation. Our approach is uniformly valid over quantile levels and accounts for dependence over time and across quantiles. It enables uniform confidence bands, Wald and Sup-t tests for joint hypotheses, and tests of shape restrictions, providing a unified framework for assessing heterogeneity in quantile effects. Under weak dependence, uniform inference for quantile regression processes is non-pivotal because the limiting distributions depend on the long-run covariance structure across quantiles. To address this issue, we develop two complementary approaches. The uniform-in-tau method estimates this structure and simulates the non-pivotal limiting distribution. For certain tests involving finitely many quantiles, the stack-Wald method delivers pivotal fixed-smoothing inference. We establish the asymptotic validity of both approaches. Simulations show improved size control over existing HAC-based procedures while maintaining good power. An application to stock-return prediction reveals substantial heterogeneity in predictive effects.
